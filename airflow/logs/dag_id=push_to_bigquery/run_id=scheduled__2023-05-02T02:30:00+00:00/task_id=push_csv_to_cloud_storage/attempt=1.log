@@ -1,0 +1,27 @@
+[2023-05-02T03:46:09.963+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-02T02:30:00+00:00 [queued]>
+[2023-05-02T03:46:10.001+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-02T02:30:00+00:00 [queued]>
+[2023-05-02T03:46:10.019+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02T03:46:10.059+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-02T03:46:10.063+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-02T03:46:10.089+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): push_csv_to_cloud_storage> on 2023-05-02 02:30:00+00:00
+[2023-05-02T03:46:10.096+0000] {standard_task_runner.py:55} INFO - Started process 11366 to run task
+[2023-05-02T03:46:10.108+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'push_to_bigquery', 'push_csv_to_cloud_storage', 'scheduled__2023-05-02T02:30:00+00:00', '--job-id', '2145', '--raw', '--subdir', 'DAGS_FOLDER/push_to_bigquery_dag.py', '--cfg-path', '/tmp/tmph5zf1q06']
+[2023-05-02T03:46:10.115+0000] {standard_task_runner.py:83} INFO - Job 2145: Subtask push_csv_to_cloud_storage
+[2023-05-02T03:46:10.307+0000] {task_command.py:389} INFO - Running <TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-02T02:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-02T03:46:10.366+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-02T03:46:10.449+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=push_to_bigquery
+AIRFLOW_CTX_TASK_ID=push_csv_to_cloud_storage
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-02T02:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-02T02:30:00+00:00
+[2023-05-02T04:19:14.937+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-02T04:19:14.944+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 11366. PIDs of all processes in the group: [11366]
+[2023-05-02T04:19:14.946+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 11366
+[2023-05-02T04:19:14.948+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-02T04:19:15.042+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=11366, status='terminated', exitcode=0, started='03:46:09') (11366) terminated with exit code 0

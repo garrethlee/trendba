@@ -1,0 +1,35 @@
+[2023-05-04T00:37:39.089+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-03T23:30:00+00:00 [queued]>
+[2023-05-04T00:37:39.107+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-03T23:30:00+00:00 [queued]>
+[2023-05-04T00:37:39.110+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T00:37:39.114+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-04T00:37:39.127+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T00:37:39.173+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_1-8> on 2023-05-03 23:30:00+00:00
+[2023-05-04T00:37:39.200+0000] {standard_task_runner.py:55} INFO - Started process 40045 to run task
+[2023-05-04T00:37:39.224+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_1-8', 'scheduled__2023-05-03T23:30:00+00:00', '--job-id', '2450', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmp89zi1k5r']
+[2023-05-04T00:37:39.230+0000] {standard_task_runner.py:83} INFO - Job 2450: Subtask scrape_teams_1-8
+[2023-05-04T00:37:39.417+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-03T23:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-04T00:37:39.631+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_1-8
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T23:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T23:30:00+00:00
+[2023-05-04T00:37:43.428+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-04T00:37:44.138+0000] {helpers.py:80} INFO - Atlanta Hawks: Successfully scraped!
+[2023-05-04T06:43:15.616+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-04T06:43:15.635+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 40045. PIDs of all processes in the group: [40045]
+[2023-05-04T06:43:15.640+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 40045
+[2023-05-04T06:43:15.645+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-04T06:43:15.659+0000] {logging_mixin.py:137} INFO - Task received SIGTERM signal
+[2023-05-04T06:43:15.661+0000] {helpers.py:86} ERROR - Task received SIGTERM signal
+[2023-05-04T06:43:15.663+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-04T06:43:19.506+0000] {helpers.py:80} INFO - Boston Celtics: Successfully scraped!
+[2023-05-04T09:46:17.482+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=40045, name='airflow task ru', status='sleeping', started='00:37:39') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-04T09:46:17.513+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 40045
+[2023-05-04T09:46:17.654+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=40045, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='00:37:39') (40045) terminated with exit code Negsignal.SIGKILL
+[2023-05-04T09:46:17.666+0000] {standard_task_runner.py:170} ERROR - Job 2450 was killed before it finished (likely due to running out of memory)

@@ -1,0 +1,135 @@
+[2023-05-07T03:19:54.770+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-07T03:19:54.779+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-07T03:19:54.786+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:19:54.787+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T03:19:54.789+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:19:54.801+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_17-24> on 2022-05-01 23:00:00+00:00
+[2023-05-07T03:19:54.807+0000] {standard_task_runner.py:55} INFO - Started process 1330 to run task
+[2023-05-07T03:19:54.815+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_17-24', 'scheduled__2022-05-01T23:00:00+00:00', '--job-id', '2749', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp4q_wpbnh']
+[2023-05-07T03:19:54.819+0000] {standard_task_runner.py:83} INFO - Job 2749: Subtask scrape_teams_17-24
+[2023-05-07T03:19:54.900+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T03:19:54.986+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_17-24
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T23:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T23:00:00+00:00
+[2023-05-07T03:19:54.988+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: scrape_and_save() missing 1 required positional argument: 'current_date'
+[2023-05-07T03:19:54.998+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_17-24, execution_date=20220501T230000, start_date=20230507T031954, end_date=20230507T031954
+[2023-05-07T03:19:55.011+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2749 for task scrape_teams_17-24 (scrape_and_save() missing 1 required positional argument: 'current_date'; 1330)
+[2023-05-07T03:19:55.065+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-07T03:19:55.087+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-08T23:43:09.444+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-08T23:43:09.461+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-08T23:43:09.463+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:43:09.464+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-08T23:43:09.466+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:43:09.479+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_17-24> on 2022-05-01 23:00:00+00:00
+[2023-05-08T23:43:09.487+0000] {standard_task_runner.py:55} INFO - Started process 115 to run task
+[2023-05-08T23:43:09.493+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_17-24', 'scheduled__2022-05-01T23:00:00+00:00', '--job-id', '3090', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp5w8l_ls0']
+[2023-05-08T23:43:09.500+0000] {standard_task_runner.py:83} INFO - Job 3090: Subtask scrape_teams_17-24
+[2023-05-08T23:43:09.602+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-08T23:43:09.644+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-08T23:43:09.687+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_17-24
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T23:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T23:00:00+00:00
+[2023-05-08T23:43:09.692+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 59, in scrape_and_save
+    after = datetime.fromisoformat(f"{{ execution_date }}")
+ValueError: Invalid isoformat string: '{ execution_date }'
+[2023-05-08T23:43:09.706+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_17-24, execution_date=20220501T230000, start_date=20230508T234309, end_date=20230508T234309
+[2023-05-08T23:43:09.715+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3090 for task scrape_teams_17-24 (Invalid isoformat string: '{ execution_date }'; 115)
+[2023-05-08T23:43:09.752+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-08T23:43:09.776+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-08T23:46:52.388+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-08T23:46:52.401+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-08T23:46:52.402+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:46:52.403+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-08T23:46:52.404+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:46:52.418+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_17-24> on 2022-05-01 23:00:00+00:00
+[2023-05-08T23:46:52.422+0000] {standard_task_runner.py:55} INFO - Started process 526 to run task
+[2023-05-08T23:46:52.426+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_17-24', 'scheduled__2022-05-01T23:00:00+00:00', '--job-id', '3200', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp_t7i4epi']
+[2023-05-08T23:46:52.430+0000] {standard_task_runner.py:83} INFO - Job 3200: Subtask scrape_teams_17-24
+[2023-05-08T23:46:52.519+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-08T23:46:52.557+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-08T23:46:52.602+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_17-24
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T23:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T23:00:00+00:00
+[2023-05-08T23:46:52.607+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 59, in scrape_and_save
+    after = datetime.fromisoformat(f"{{ execution_date }}")
+ValueError: Invalid isoformat string: '{ execution_date }'
+[2023-05-08T23:46:52.621+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_17-24, execution_date=20220501T230000, start_date=20230508T234652, end_date=20230508T234652
+[2023-05-08T23:46:52.632+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3200 for task scrape_teams_17-24 (Invalid isoformat string: '{ execution_date }'; 526)
+[2023-05-08T23:46:52.680+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-08T23:46:52.702+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-09T21:50:03.890+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-09T21:50:03.909+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [queued]>
+[2023-05-09T21:50:03.912+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:50:03.914+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-09T21:50:03.916+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:50:03.935+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_17-24> on 2022-05-01 23:00:00+00:00
+[2023-05-09T21:50:03.952+0000] {standard_task_runner.py:55} INFO - Started process 12870 to run task
+[2023-05-09T21:50:03.958+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_17-24', 'scheduled__2022-05-01T23:00:00+00:00', '--job-id', '3425', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpingccf9w']
+[2023-05-09T21:50:03.962+0000] {standard_task_runner.py:83} INFO - Job 3425: Subtask scrape_teams_17-24
+[2023-05-09T21:50:04.086+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_17-24 scheduled__2022-05-01T23:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-09T21:50:04.147+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-09T21:50:04.220+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_17-24
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T23:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T23:00:00+00:00
+[2023-05-09T21:50:13.078+0000] {helpers.py:94} INFO - Milwaukee Bucks: Successfully scraped!
+[2023-05-09T21:50:28.587+0000] {helpers.py:94} INFO - Minnesota Timberwolves: Successfully scraped!
+[2023-05-09T21:50:45.027+0000] {helpers.py:94} INFO - New Orleans Pelicans: Successfully scraped!
+[2023-05-09T21:51:00.921+0000] {helpers.py:94} INFO - New York Knicks: Successfully scraped!
+[2023-05-09T21:51:16.362+0000] {helpers.py:94} INFO - Oklahoma City Thunder: Successfully scraped!
+[2023-05-09T21:51:32.536+0000] {helpers.py:94} INFO - Orlando Magic: Successfully scraped!
+[2023-05-09T21:51:45.127+0000] {helpers.py:94} INFO - Philadelphia 76ers: Successfully scraped!
+[2023-05-09T21:51:56.969+0000] {helpers.py:94} INFO - Phoenix Suns: Successfully scraped!
+[2023-05-09T21:51:56.998+0000] {helpers.py:109} INFO - Saved in /opt/***/data/output_scrape_teams_17-24.csv
+[2023-05-09T21:51:57.001+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-09T21:51:57.023+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_17-24, execution_date=20220501T230000, start_date=20230509T215003, end_date=20230509T215157
+[2023-05-09T21:51:57.133+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-09T21:51:57.178+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,96 @@
+[2023-05-10T02:29:37.969+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 manual__2023-05-10T02:29:35.512807+00:00 [queued]>
+[2023-05-10T02:29:37.996+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 manual__2023-05-10T02:29:35.512807+00:00 [queued]>
+[2023-05-10T02:29:37.999+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:29:38.004+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:29:38.006+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:29:38.072+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-10 02:29:35.512807+00:00
+[2023-05-10T02:29:38.103+0000] {standard_task_runner.py:55} INFO - Started process 17687 to run task
+[2023-05-10T02:29:38.125+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'manual__2023-05-10T02:29:35.512807+00:00', '--job-id', '4023', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp1ljz01q5']
+[2023-05-10T02:29:38.154+0000] {standard_task_runner.py:83} INFO - Job 4023: Subtask scrape_teams_25-30
+[2023-05-10T02:29:38.381+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 manual__2023-05-10T02:29:35.512807+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:29:38.460+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:29:38.531+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T02:29:35.512807+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-10T02:29:35.512807+00:00
+[2023-05-10T02:29:40.156+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:40.157+0000] {helpers.py:99} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:29:41.915+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:41.916+0000] {helpers.py:99} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:29:43.793+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:43.794+0000] {helpers.py:99} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:29:45.796+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:45.800+0000] {helpers.py:99} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:29:47.644+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:47.645+0000] {helpers.py:99} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:29:49.308+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:49.311+0000] {helpers.py:99} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:29:51.048+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:51.050+0000] {helpers.py:99} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:29:52.770+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:52.771+0000] {helpers.py:99} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:29:54.448+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:54.450+0000] {helpers.py:99} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:29:56.198+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:56.199+0000] {helpers.py:99} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:29:57.872+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:57.874+0000] {helpers.py:99} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:29:59.784+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:29:59.787+0000] {helpers.py:99} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:30:01.501+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:01.509+0000] {helpers.py:99} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:30:03.453+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-10T02:30:03.467+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 17687. PIDs of all processes in the group: [17687]
+[2023-05-10T02:30:03.468+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 17687
+[2023-05-10T02:30:03.469+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-10T02:30:03.471+0000] {helpers.py:98} ERROR - error with request Task received SIGTERM signal
+[2023-05-10T02:30:03.473+0000] {helpers.py:99} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:30:05.233+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:05.236+0000] {helpers.py:99} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:30:09.816+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:09.819+0000] {helpers.py:99} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:30:13.243+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:13.245+0000] {helpers.py:99} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:30:16.217+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:16.229+0000] {helpers.py:99} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:30:19.438+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:19.441+0000] {helpers.py:99} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:30:22.664+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:22.665+0000] {helpers.py:99} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:30:25.315+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:25.317+0000] {helpers.py:99} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:30:28.447+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:28.448+0000] {helpers.py:99} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:30:31.582+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:31.585+0000] {helpers.py:99} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:30:34.470+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:34.472+0000] {helpers.py:99} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:30:37.895+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:37.904+0000] {helpers.py:99} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:30:40.542+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:40.544+0000] {helpers.py:99} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:30:43.735+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:43.746+0000] {helpers.py:99} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:30:46.450+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:46.454+0000] {helpers.py:99} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:30:49.834+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:49.835+0000] {helpers.py:99} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:30:52.823+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:52.832+0000] {helpers.py:99} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:30:56.091+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:56.093+0000] {helpers.py:99} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:30:58.955+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:30:58.957+0000] {helpers.py:99} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:31:02.044+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:31:02.048+0000] {helpers.py:99} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:31:03.478+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=17687, name='airflow task ru', status='sleeping', started='02:29:37') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-10T02:31:03.484+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 17687
+[2023-05-10T02:31:03.580+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=17687, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='02:29:37') (17687) terminated with exit code Negsignal.SIGKILL
+[2023-05-10T02:31:03.581+0000] {standard_task_runner.py:170} ERROR - Job 4023 was killed before it finished (likely due to running out of memory)

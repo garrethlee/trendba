@@ -1,0 +1,42 @@
+[2023-05-01T14:41:22.328+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T12:30:00+00:00 [queued]>
+[2023-05-01T14:41:22.361+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T12:30:00+00:00 [queued]>
+[2023-05-01T14:41:22.364+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T14:41:22.365+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-01T14:41:22.366+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T14:41:22.390+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): push_csv_to_cloud_storage> on 2023-05-01 12:30:00+00:00
+[2023-05-01T14:41:22.403+0000] {standard_task_runner.py:55} INFO - Started process 5851 to run task
+[2023-05-01T14:41:22.419+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'push_to_bigquery', 'push_csv_to_cloud_storage', 'scheduled__2023-05-01T12:30:00+00:00', '--job-id', '2049', '--raw', '--subdir', 'DAGS_FOLDER/push_to_bigquery_dag.py', '--cfg-path', '/tmp/tmpw6icdwj7']
+[2023-05-01T14:41:22.427+0000] {standard_task_runner.py:83} INFO - Job 2049: Subtask push_csv_to_cloud_storage
+[2023-05-01T14:41:22.584+0000] {task_command.py:389} INFO - Running <TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T12:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-01T14:41:22.651+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-01T14:41:22.771+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=push_to_bigquery
+AIRFLOW_CTX_TASK_ID=push_csv_to_cloud_storage
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T12:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T12:30:00+00:00
+[2023-05-01T14:41:22.930+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfcf7d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:22.938+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfcfcd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:22.944+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84090>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:24.105+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf849d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:24.110+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84fd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:24.115+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8d3d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:26.692+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8dd50>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:26.711+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf993d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:26.719+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf99850>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.755+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa2290>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.763+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa2950>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.768+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8d590>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.945+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84dd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.952+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84d50>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T14:41:27.957+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa2dd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T15:10:32.027+0000] {logging_mixin.py:137} INFO - File /opt/***/data/all_teams.csv has been uploaded to Google Cloud Storage Bucket trendba-bucket-1
+[2023-05-01T15:10:32.029+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-01T15:10:32.053+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=push_to_bigquery, task_id=push_csv_to_cloud_storage, execution_date=20230501T123000, start_date=20230501T144122, end_date=20230501T151032
+[2023-05-01T15:10:32.122+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-01T15:10:32.149+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

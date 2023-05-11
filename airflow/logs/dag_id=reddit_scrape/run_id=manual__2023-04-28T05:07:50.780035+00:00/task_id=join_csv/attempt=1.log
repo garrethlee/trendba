@@ -1,0 +1,38 @@
+[2023-04-28T05:09:44.841+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: reddit_scrape.join_csv manual__2023-04-28T05:07:50.780035+00:00 [queued]>
+[2023-04-28T05:09:44.850+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: reddit_scrape.join_csv manual__2023-04-28T05:07:50.780035+00:00 [queued]>
+[2023-04-28T05:09:44.851+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T05:09:44.852+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-28T05:09:44.857+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T05:09:44.866+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): join_csv> on 2023-04-28 05:07:50.780035+00:00
+[2023-04-28T05:09:44.873+0000] {standard_task_runner.py:55} INFO - Started process 1165 to run task
+[2023-04-28T05:09:44.877+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'reddit_scrape', 'join_csv', 'manual__2023-04-28T05:07:50.780035+00:00', '--job-id', '1675', '--raw', '--subdir', 'DAGS_FOLDER/reddit_scrape.py', '--cfg-path', '/tmp/tmpdu021p2i']
+[2023-04-28T05:09:44.882+0000] {standard_task_runner.py:83} INFO - Job 1675: Subtask join_csv
+[2023-04-28T05:09:44.954+0000] {task_command.py:389} INFO - Running <TaskInstance: reddit_scrape.join_csv manual__2023-04-28T05:07:50.780035+00:00 [running]> on host 06bfdeeadc0b
+[2023-04-28T05:09:45.015+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=reddit_scrape
+AIRFLOW_CTX_TASK_ID=join_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T05:07:50.780035+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-28T05:07:50.780035+00:00
+[2023-04-28T05:09:45.017+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/reddit_scrape.py", line 58, in join
+    f"{AIRFLOW_HOME}/output_teams_25-30.csv",
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/reshape/concat.py", line 304, in concat
+    sort=sort,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/reshape/concat.py", line 384, in __init__
+    raise TypeError(msg)
+TypeError: cannot concatenate object of type '<class 'str'>'; only Series and DataFrame objs are valid
+[2023-04-28T05:09:45.031+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=reddit_scrape, task_id=join_csv, execution_date=20230428T050750, start_date=20230428T050944, end_date=20230428T050945
+[2023-04-28T05:09:45.044+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1675 for task join_csv (cannot concatenate object of type '<class 'str'>'; only Series and DataFrame objs are valid; 1165)
+[2023-04-28T05:09:45.090+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-04-28T05:09:45.126+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

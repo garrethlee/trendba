@@ -1,0 +1,87 @@
+[2023-04-28T05:07:54.832+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T05:07:50.780035+00:00 [queued]>
+[2023-04-28T05:07:54.861+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T05:07:50.780035+00:00 [queued]>
+[2023-04-28T05:07:54.864+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T05:07:54.866+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-28T05:07:54.868+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T05:07:54.896+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): teams_9-16> on 2023-04-28 05:07:50.780035+00:00
+[2023-04-28T05:07:54.915+0000] {standard_task_runner.py:55} INFO - Started process 1120 to run task
+[2023-04-28T05:07:54.943+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'reddit_scrape', 'teams_9-16', 'manual__2023-04-28T05:07:50.780035+00:00', '--job-id', '1672', '--raw', '--subdir', 'DAGS_FOLDER/reddit_scrape.py', '--cfg-path', '/tmp/tmp682pkarj']
+[2023-04-28T05:07:54.948+0000] {standard_task_runner.py:83} INFO - Job 1672: Subtask teams_9-16
+[2023-04-28T05:07:55.106+0000] {task_command.py:389} INFO - Running <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T05:07:50.780035+00:00 [running]> on host 06bfdeeadc0b
+[2023-04-28T05:07:55.218+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=reddit_scrape
+AIRFLOW_CTX_TASK_ID=teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T05:07:50.780035+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-28T05:07:50.780035+00:00
+[2023-04-28T05:07:56.132+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-04-28T05:07:56.141+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:07:56.142+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:07:56.817+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:07:56.818+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:07:58.646+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:07:58.648+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:07:59.694+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:07:59.700+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:08:00.641+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:08:00.644+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:08:01.205+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:08:01.208+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:08:01.642+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:01.645+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:01.646+0000] {reddit_scrape.py:48} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-28T05:08:02.995+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:02.996+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:03.000+0000] {reddit_scrape.py:48} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-28T05:08:04.215+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:04.216+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:04.218+0000] {reddit_scrape.py:48} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-28T05:08:05.912+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:05.916+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:05.917+0000] {reddit_scrape.py:48} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-28T05:08:07.454+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:07.458+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:07.460+0000] {reddit_scrape.py:48} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-28T05:08:08.847+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:08.849+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:08.850+0000] {reddit_scrape.py:48} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-28T05:08:10.864+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:08:10.867+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:08:11.132+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:11.133+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:11.135+0000] {reddit_scrape.py:48} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-28T05:08:12.533+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:12.535+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:12.537+0000] {reddit_scrape.py:48} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-28T05:08:13.957+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:13.963+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:13.965+0000] {reddit_scrape.py:48} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-28T05:08:15.305+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:15.309+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:15.311+0000] {reddit_scrape.py:48} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-28T05:08:16.709+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:16.710+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:16.711+0000] {reddit_scrape.py:48} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-28T05:08:18.077+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:18.079+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:18.080+0000] {reddit_scrape.py:48} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-28T05:08:19.294+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:19.296+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:19.297+0000] {reddit_scrape.py:48} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-28T05:08:20.634+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:20.635+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:20.638+0000] {reddit_scrape.py:48} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-28T05:08:22.066+0000] {reddit_scrape.py:46} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T05:08:22.076+0000] {reddit_scrape.py:47} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T05:08:22.079+0000] {reddit_scrape.py:48} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-28T05:08:24.297+0000] {reddit_scrape.py:41} INFO - /opt/***/output_teams_9-16.csv
+[2023-04-28T05:08:24.299+0000] {reddit_scrape.py:42} INFO - Success!
+[2023-04-28T05:08:24.303+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-28T05:08:24.345+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=reddit_scrape, task_id=teams_9-16, execution_date=20230428T050750, start_date=20230428T050754, end_date=20230428T050824
+[2023-04-28T05:08:24.433+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-28T05:08:24.482+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

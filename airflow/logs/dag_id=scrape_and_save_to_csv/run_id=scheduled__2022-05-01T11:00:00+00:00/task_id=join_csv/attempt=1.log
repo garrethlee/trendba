@@ -1,0 +1,68 @@
+[2023-05-07T05:34:33.517+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [queued]>
+[2023-05-07T05:34:33.529+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [queued]>
+[2023-05-07T05:34:33.533+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T05:34:33.534+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T05:34:33.535+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T05:34:33.550+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): join_csv> on 2022-05-01 11:00:00+00:00
+[2023-05-07T05:34:33.558+0000] {standard_task_runner.py:55} INFO - Started process 2757 to run task
+[2023-05-07T05:34:33.567+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'join_csv', 'scheduled__2022-05-01T11:00:00+00:00', '--job-id', '2953', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpkh4wwbae']
+[2023-05-07T05:34:33.571+0000] {standard_task_runner.py:83} INFO - Job 2953: Subtask join_csv
+[2023-05-07T05:34:33.675+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T05:34:33.799+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=join_csv
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T11:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T11:00:00+00:00
+[2023-05-07T05:34:33.814+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 110, in join
+    pd.read_csv(f"{DATA_DIRECTORY}/output_scrape_teams_9-16.csv"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 549, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+[2023-05-07T05:34:33.867+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=join_csv, execution_date=20220501T110000, start_date=20230507T053433, end_date=20230507T053433
+[2023-05-07T05:34:33.888+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2953 for task join_csv (No columns to parse from file; 2757)
+[2023-05-07T05:34:33.946+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-07T05:34:33.971+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-09T21:28:01.620+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [queued]>
+[2023-05-09T21:28:01.628+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [queued]>
+[2023-05-09T21:28:01.630+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:28:01.631+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-09T21:28:01.632+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:28:01.641+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): join_csv> on 2022-05-01 11:00:00+00:00
+[2023-05-09T21:28:01.647+0000] {standard_task_runner.py:55} INFO - Started process 12165 to run task
+[2023-05-09T21:28:01.652+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'join_csv', 'scheduled__2022-05-01T11:00:00+00:00', '--job-id', '3357', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmproakwlpy']
+[2023-05-09T21:28:01.665+0000] {standard_task_runner.py:83} INFO - Job 3357: Subtask join_csv
+[2023-05-09T21:28:01.737+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.join_csv scheduled__2022-05-01T11:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-09T21:28:01.845+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=join_csv
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T11:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T11:00:00+00:00
+[2023-05-09T21:28:01.979+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-09T21:28:01.997+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=join_csv, execution_date=20220501T110000, start_date=20230509T212801, end_date=20230509T212801
+[2023-05-09T21:28:02.026+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-09T21:28:02.047+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

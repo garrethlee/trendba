@@ -1,0 +1,873 @@
+[2023-05-07T03:19:25.702+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:19:25.744+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:19:25.748+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:19:25.753+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T03:19:25.756+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:19:25.847+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-07T03:19:25.896+0000] {standard_task_runner.py:55} INFO - Started process 1107 to run task
+[2023-05-07T03:19:25.934+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '2669', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmplu36gn22']
+[2023-05-07T03:19:25.954+0000] {standard_task_runner.py:83} INFO - Job 2669: Subtask scrape_teams_25-30
+[2023-05-07T03:19:26.825+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T03:19:27.540+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-07T03:19:27.550+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: scrape_and_save() missing 1 required positional argument: 'current_date'
+[2023-05-07T03:19:27.615+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230507T031925, end_date=20230507T031927
+[2023-05-07T03:19:27.739+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 2669 for task scrape_teams_25-30 (scrape_and_save() missing 1 required positional argument: 'current_date'; 1107)
+[2023-05-07T03:19:27.785+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-07T03:19:27.921+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-07T03:23:10.717+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:23:10.756+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:23:10.757+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:23:10.758+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T03:23:10.766+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:23:10.787+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-07T03:23:10.802+0000] {standard_task_runner.py:55} INFO - Started process 1501 to run task
+[2023-05-07T03:23:10.808+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '2783', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp4equ0ea_']
+[2023-05-07T03:23:10.812+0000] {standard_task_runner.py:83} INFO - Job 2783: Subtask scrape_teams_25-30
+[2023-05-07T03:23:10.910+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T03:23:10.949+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-07T03:23:10.994+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-07T03:23:11.361+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:11.362+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:11.363+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:23:12.529+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:12.530+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:12.531+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:23:13.732+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:13.740+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:13.740+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:23:15.053+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:15.054+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:15.055+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:23:16.206+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:16.207+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:16.208+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:23:17.355+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:17.384+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:17.385+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:23:18.550+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:18.552+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:18.553+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:23:19.742+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:19.743+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:19.744+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:23:20.918+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:20.919+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:20.925+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:23:22.370+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:22.410+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:22.413+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:23:23.786+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:23.807+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:23.808+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:23:25.196+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:25.209+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:25.226+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:23:26.611+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:26.612+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:26.614+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:23:27.778+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:27.779+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:27.780+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:23:29.021+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:29.046+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:29.047+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:23:30.224+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:30.227+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:30.227+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:23:31.425+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:31.441+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:31.442+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:23:32.584+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:32.586+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:32.587+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:23:33.732+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:33.733+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:33.734+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:23:34.980+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:34.983+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:34.985+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:23:36.134+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:36.136+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:36.136+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:23:37.298+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:37.299+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:37.300+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:23:38.646+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:38.647+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:38.648+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:23:40.168+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:40.170+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:40.175+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:23:41.321+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:41.323+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:41.324+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:23:42.491+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:42.492+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:42.493+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:23:43.668+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:43.671+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:43.674+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:23:44.936+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:44.937+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:44.967+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:23:46.135+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:46.136+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:46.138+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:23:47.289+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:47.291+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:47.293+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:23:48.456+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:48.458+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:48.460+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:23:49.617+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:49.624+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:49.625+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:23:50.775+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:50.776+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:50.777+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:23:52.268+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:52.270+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:52.272+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:23:53.432+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:53.434+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:53.435+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:23:54.778+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:54.779+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:54.780+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:23:56.142+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:56.143+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:56.144+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:23:57.490+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:57.491+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:57.492+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:23:58.654+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:58.655+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:58.656+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:23:59.817+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:59.823+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:23:59.824+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:24:00.986+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:00.988+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:00.989+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:24:02.154+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:02.155+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:02.156+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:24:03.326+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:03.328+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:03.329+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:24:04.484+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:04.485+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:04.486+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:24:05.641+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:05.643+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:05.643+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:24:06.981+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:06.982+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:06.983+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:24:08.153+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:08.158+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:08.159+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:24:09.308+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:09.310+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:09.311+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:24:10.494+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:10.495+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:10.496+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:24:11.673+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:11.674+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:11.675+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:24:12.828+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:12.829+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:12.830+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:24:13.981+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:13.982+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:13.983+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:24:15.143+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:15.145+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:15.147+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:24:16.300+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:16.302+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:16.303+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:24:17.458+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:17.459+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:17.462+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:24:18.805+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:18.806+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:18.807+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:24:19.958+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:19.961+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:19.962+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:24:21.104+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:21.105+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:21.107+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:24:22.254+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:22.256+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:22.257+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:24:23.408+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:23.409+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:23.411+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:24:24.557+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:24.560+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:24.561+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:24:25.721+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:25.722+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:25.723+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:24:27.013+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:27.014+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:27.015+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:24:28.173+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:28.175+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:28.176+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:24:29.328+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:29.329+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:29.330+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:24:30.474+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:30.475+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:24:30.476+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:24:31.498+0000] {helpers.py:102} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-07T03:24:31.500+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-07T03:24:31.535+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230507T032310, end_date=20230507T032431
+[2023-05-07T03:24:31.602+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-07T03:24:31.641+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-07T03:43:50.416+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:43:50.509+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T03:43:50.515+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:43:50.522+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T03:43:50.533+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T03:43:50.596+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-07T03:43:50.618+0000] {standard_task_runner.py:55} INFO - Started process 417 to run task
+[2023-05-07T03:43:50.626+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '2845', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpdik8deqz']
+[2023-05-07T03:43:50.635+0000] {standard_task_runner.py:83} INFO - Job 2845: Subtask scrape_teams_25-30
+[2023-05-07T03:43:50.769+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T03:43:50.957+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-07T03:43:51.155+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-07T03:43:51.706+0000] {helpers.py:86} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-07T03:43:52.297+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-07T03:43:52.326+0000] {helpers.py:86} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-07T03:43:53.102+0000] {helpers.py:86} INFO - San Antonio Spurs: Successfully scraped!
+[2023-05-07T03:43:53.759+0000] {helpers.py:86} INFO - Toronto Raptors: Successfully scraped!
+[2023-05-07T03:43:54.366+0000] {helpers.py:86} INFO - Utah Jazz: Successfully scraped!
+[2023-05-07T03:43:54.804+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:43:54.813+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:43:54.815+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T03:43:55.980+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:43:55.982+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:43:55.985+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T03:46:47.876+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:47.883+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:47.885+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T03:46:49.533+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:49.536+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:49.538+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T03:46:51.382+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:51.385+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:51.389+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T03:46:52.703+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:52.717+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:52.718+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T03:46:54.270+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:54.271+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:54.273+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T03:46:55.659+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:55.666+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:55.667+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T03:46:56.814+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:56.818+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:56.820+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T03:46:58.248+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:58.257+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:58.259+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T03:46:59.409+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:59.411+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T03:46:59.444+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T03:47:00.502+0000] {helpers.py:102} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-07T03:47:00.512+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-07T03:47:00.566+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230507T034350, end_date=20230507T034700
+[2023-05-07T03:47:00.768+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-07T03:47:01.236+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-07T05:22:03.451+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T05:22:03.460+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T05:22:03.461+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T05:22:03.462+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T05:22:03.463+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T05:22:03.471+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-07T05:22:03.478+0000] {standard_task_runner.py:55} INFO - Started process 2420 to run task
+[2023-05-07T05:22:03.481+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '2916', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpqrmlr_qw']
+[2023-05-07T05:22:03.484+0000] {standard_task_runner.py:83} INFO - Job 2916: Subtask scrape_teams_25-30
+[2023-05-07T05:22:03.545+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T05:22:03.574+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-07T05:22:03.608+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-07T05:22:03.950+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:03.952+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:03.958+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:22:05.124+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:05.125+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:05.127+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:22:06.297+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:06.299+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:06.301+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:22:07.640+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:07.642+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:07.643+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:22:08.960+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:08.966+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:08.968+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:22:10.259+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:10.263+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:10.266+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:22:11.536+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:11.537+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:11.538+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:22:12.855+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:12.857+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:12.858+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:22:14.008+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:14.009+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:14.010+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:22:15.274+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:15.281+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:15.282+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:22:16.442+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:16.445+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:16.447+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:22:17.772+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:17.773+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:17.775+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:22:19.014+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:19.023+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:19.024+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:22:20.293+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:20.294+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:20.295+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:22:21.453+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:21.455+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:21.456+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:22:22.717+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:22.718+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:22.720+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:22:23.959+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:23.960+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:23.962+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:22:25.120+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:25.122+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:25.124+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:22:26.275+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:26.276+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:26.278+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:22:27.430+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:27.431+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:27.432+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:22:28.736+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:28.737+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:28.738+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:22:29.887+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:29.888+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:29.889+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:22:31.238+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:31.239+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:31.241+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:22:32.602+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:32.604+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:32.605+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:22:33.943+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:33.944+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:33.945+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:22:35.299+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:35.302+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:35.305+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:22:36.620+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:36.642+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:36.644+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:22:37.893+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:37.894+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:37.895+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:22:39.042+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:39.044+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:39.045+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:22:40.208+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:40.267+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:40.268+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:22:41.420+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:41.421+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:41.423+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:22:42.702+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:42.705+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:42.707+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:22:44.065+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:44.066+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:44.068+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:22:45.224+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:45.230+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:45.233+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:22:46.401+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:46.402+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:46.412+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:22:47.730+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:47.731+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:47.733+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:22:49.191+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:49.192+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:49.193+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:22:50.347+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:50.349+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:50.350+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:22:51.664+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:51.665+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:51.666+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:22:52.827+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:52.829+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:52.830+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:22:54.099+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:54.100+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:54.106+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:22:55.258+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:55.259+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:55.261+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:22:56.429+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:56.430+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:56.431+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:22:57.737+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:57.738+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:57.739+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:22:58.917+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:58.919+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:22:58.922+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:23:00.260+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:00.261+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:00.262+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:23:01.411+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:01.413+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:01.414+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:23:02.759+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:02.761+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:02.773+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:23:03.922+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:03.923+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:03.925+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:23:05.091+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:05.093+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:05.094+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:23:06.282+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:06.283+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:06.284+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:23:07.522+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:07.523+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:07.524+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:23:08.756+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:08.757+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:08.758+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:23:09.910+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:09.911+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:09.912+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:23:11.256+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:11.258+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:11.259+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:23:12.613+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:12.614+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:12.622+0000] {helpers.py:93} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T05:23:13.969+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:13.971+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:14.024+0000] {helpers.py:93} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T05:23:15.177+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:15.178+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:15.180+0000] {helpers.py:93} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T05:23:16.359+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:16.360+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:16.361+0000] {helpers.py:93} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T05:23:17.599+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:17.600+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:17.602+0000] {helpers.py:93} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T05:23:18.981+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:18.983+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:18.986+0000] {helpers.py:93} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T05:23:20.138+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:20.140+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:20.142+0000] {helpers.py:93} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T05:23:21.300+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:21.302+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:21.302+0000] {helpers.py:93} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T05:23:22.602+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:22.603+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:22.604+0000] {helpers.py:93} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T05:23:23.746+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:23.747+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:23.748+0000] {helpers.py:93} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T05:23:24.935+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:24.936+0000] {helpers.py:92} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T05:23:24.937+0000] {helpers.py:93} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T05:23:25.941+0000] {helpers.py:102} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-07T05:23:25.943+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-07T05:23:25.953+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230507T052203, end_date=20230507T052325
+[2023-05-07T05:23:25.990+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-07T05:23:26.008+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-07T15:32:36.784+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T15:32:36.798+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-07T15:32:36.800+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T15:32:36.801+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-07T15:32:36.802+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-07T15:32:36.815+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-07T15:32:36.822+0000] {standard_task_runner.py:55} INFO - Started process 3681 to run task
+[2023-05-07T15:32:36.830+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '3005', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp9vsfysqu']
+[2023-05-07T15:32:36.834+0000] {standard_task_runner.py:83} INFO - Job 3005: Subtask scrape_teams_25-30
+[2023-05-07T15:32:36.931+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host 6589836e9c08
+[2023-05-07T15:32:37.011+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-07T15:32:37.063+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-07T15:32:37.602+0000] {helpers.py:87} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-07T15:32:37.946+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:37.948+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:37.950+0000] {helpers.py:94} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T15:32:39.109+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:39.111+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:39.112+0000] {helpers.py:94} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T15:32:40.266+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:40.269+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:40.278+0000] {helpers.py:94} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T15:32:41.445+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:41.447+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:41.449+0000] {helpers.py:94} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T15:32:42.724+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:42.726+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:42.727+0000] {helpers.py:94} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T15:32:43.911+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:43.913+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:43.916+0000] {helpers.py:94} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T15:32:45.076+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:45.078+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:45.079+0000] {helpers.py:94} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T15:32:46.245+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:46.247+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:46.248+0000] {helpers.py:94} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T15:32:47.395+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:47.399+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:47.400+0000] {helpers.py:94} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T15:32:48.561+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:48.562+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:48.563+0000] {helpers.py:94} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T15:32:49.714+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:49.715+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:49.718+0000] {helpers.py:94} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T15:32:51.033+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:51.035+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:51.051+0000] {helpers.py:94} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T15:32:52.205+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:52.206+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:52.208+0000] {helpers.py:94} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T15:32:53.560+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:53.563+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:53.564+0000] {helpers.py:94} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T15:32:54.733+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:54.735+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:54.747+0000] {helpers.py:94} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T15:32:56.094+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:56.100+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:56.101+0000] {helpers.py:94} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T15:32:57.254+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:57.255+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:57.257+0000] {helpers.py:94} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T15:32:58.418+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:58.419+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:58.420+0000] {helpers.py:94} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T15:32:59.731+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:59.731+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:32:59.732+0000] {helpers.py:94} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T15:33:00.892+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:00.893+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:00.894+0000] {helpers.py:94} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T15:33:02.042+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:02.043+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:02.051+0000] {helpers.py:94} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T15:33:03.226+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:03.228+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:03.229+0000] {helpers.py:94} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T15:33:04.377+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:04.378+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:04.379+0000] {helpers.py:94} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T15:33:05.740+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:05.741+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:05.742+0000] {helpers.py:94} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T15:33:06.895+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:06.896+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:06.898+0000] {helpers.py:94} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T15:33:08.179+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:08.180+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:08.181+0000] {helpers.py:94} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T15:33:09.395+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:09.398+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:09.400+0000] {helpers.py:94} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T15:33:10.550+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:10.553+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:10.556+0000] {helpers.py:94} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T15:33:11.817+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:11.818+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:11.820+0000] {helpers.py:94} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T15:33:12.983+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:12.984+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:12.985+0000] {helpers.py:94} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T15:33:14.148+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:14.149+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:14.150+0000] {helpers.py:94} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T15:33:15.307+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:15.308+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:15.309+0000] {helpers.py:94} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T15:33:16.493+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:16.494+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:16.495+0000] {helpers.py:94} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T15:33:17.786+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:17.787+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:17.788+0000] {helpers.py:94} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T15:33:19.061+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:19.063+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:19.064+0000] {helpers.py:94} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T15:33:20.319+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:20.321+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:20.322+0000] {helpers.py:94} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T15:33:21.479+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:21.480+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:21.482+0000] {helpers.py:94} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T15:33:22.681+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:22.684+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:22.688+0000] {helpers.py:94} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T15:33:23.879+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:23.880+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:23.881+0000] {helpers.py:94} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T15:33:25.206+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:25.208+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:25.209+0000] {helpers.py:94} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T15:33:26.367+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:26.369+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:26.370+0000] {helpers.py:94} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T15:33:27.530+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:27.531+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:27.532+0000] {helpers.py:94} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T15:33:28.684+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:28.691+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:28.692+0000] {helpers.py:94} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T15:33:29.858+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:29.859+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:29.860+0000] {helpers.py:94} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T15:33:31.250+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:31.251+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:31.254+0000] {helpers.py:94} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-07T15:33:32.602+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:32.604+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:32.606+0000] {helpers.py:94} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-07T15:33:33.975+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:33.977+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:33.979+0000] {helpers.py:94} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-07T15:33:35.143+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:35.144+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:35.145+0000] {helpers.py:94} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-07T15:33:36.301+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:36.302+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:36.303+0000] {helpers.py:94} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-07T15:33:37.463+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:37.465+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:37.477+0000] {helpers.py:94} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-07T15:33:38.775+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:38.777+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:38.778+0000] {helpers.py:94} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-07T15:33:39.926+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:39.928+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:39.928+0000] {helpers.py:94} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-07T15:33:41.317+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:41.318+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:41.319+0000] {helpers.py:94} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-07T15:33:42.539+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:42.540+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:42.548+0000] {helpers.py:94} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-07T15:33:43.708+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:43.709+0000] {helpers.py:93} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-07T15:33:43.710+0000] {helpers.py:94} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-07T15:33:44.719+0000] {helpers.py:103} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-07T15:33:44.720+0000] {python.py:177} INFO - Done. Returned value was: Empty DataFrame
+Columns: []
+Index: []
+[2023-05-07T15:33:44.737+0000] {xcom.py:635} ERROR - Object of type DataFrame is not JSON serializable. If you are using pickle instead of JSON for XCom, then you need to enable pickle support for XCom in your *** config or make sure to decorate your object with attr.
+[2023-05-07T15:33:44.740+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2305, in xcom_push
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/xcom.py", line 240, in set
+    map_index=map_index,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/xcom.py", line 627, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/json.py", line 176, in encode
+    return super().encode(o)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/json.py", line 170, in default
+    return super().default(o)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+[2023-05-07T15:33:44.788+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230507T153236, end_date=20230507T153344
+[2023-05-07T15:33:44.801+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3005 for task scrape_teams_25-30 (Object of type DataFrame is not JSON serializable; 3681)
+[2023-05-07T15:33:44.831+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-07T15:33:44.854+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-08T23:46:08.656+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-08T23:46:08.665+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-08T23:46:08.666+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:46:08.667+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-08T23:46:08.668+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:46:08.682+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-08T23:46:08.689+0000] {standard_task_runner.py:55} INFO - Started process 284 to run task
+[2023-05-08T23:46:08.693+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '3122', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmplq2f32zc']
+[2023-05-08T23:46:08.696+0000] {standard_task_runner.py:83} INFO - Job 3122: Subtask scrape_teams_25-30
+[2023-05-08T23:46:08.777+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-08T23:46:08.821+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-08T23:46:08.861+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-08T23:46:08.866+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 59, in scrape_and_save
+    after = datetime.fromisoformat(f"{{ execution_date }}")
+ValueError: Invalid isoformat string: '{ execution_date }'
+[2023-05-08T23:46:08.884+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230508T234608, end_date=20230508T234608
+[2023-05-08T23:46:08.893+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3122 for task scrape_teams_25-30 (Invalid isoformat string: '{ execution_date }'; 284)
+[2023-05-08T23:46:08.905+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-08T23:46:08.929+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-08T23:48:40.993+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-08T23:48:41.008+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-08T23:48:41.009+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:48:41.010+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-08T23:48:41.012+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-08T23:48:41.031+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-08T23:48:41.045+0000] {standard_task_runner.py:55} INFO - Started process 764 to run task
+[2023-05-08T23:48:41.050+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '3262', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmptnxxldvx']
+[2023-05-08T23:48:41.053+0000] {standard_task_runner.py:83} INFO - Job 3262: Subtask scrape_teams_25-30
+[2023-05-08T23:48:41.134+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-08T23:48:41.180+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-08T23:48:41.224+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-08T23:48:41.228+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 59, in scrape_and_save
+    after = datetime.fromisoformat("{{ execution_date }}")
+ValueError: Invalid isoformat string: '{{ execution_date }}'
+[2023-05-08T23:48:41.249+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230508T234840, end_date=20230508T234841
+[2023-05-08T23:48:41.260+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 3262 for task scrape_teams_25-30 (Invalid isoformat string: '{{ execution_date }}'; 764)
+[2023-05-08T23:48:41.303+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-08T23:48:41.345+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-09T21:13:28.153+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-09T21:13:28.171+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [queued]>
+[2023-05-09T21:13:28.179+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:13:28.197+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-09T21:13:28.202+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-09T21:13:28.219+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2022-05-01 04:00:00+00:00
+[2023-05-09T21:13:28.227+0000] {standard_task_runner.py:55} INFO - Started process 11698 to run task
+[2023-05-09T21:13:28.235+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2022-05-01T04:00:00+00:00', '--job-id', '3311', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpskf025o7']
+[2023-05-09T21:13:28.243+0000] {standard_task_runner.py:83} INFO - Job 3311: Subtask scrape_teams_25-30
+[2023-05-09T21:13:28.343+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2022-05-01T04:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-09T21:13:28.381+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-09T21:13:28.433+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-01T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-01T04:00:00+00:00
+[2023-05-09T21:13:33.749+0000] {helpers.py:94} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-09T21:13:37.177+0000] {helpers.py:94} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-09T21:13:41.210+0000] {helpers.py:94} INFO - San Antonio Spurs: Successfully scraped!
+[2023-05-09T21:13:45.924+0000] {helpers.py:94} INFO - Toronto Raptors: Successfully scraped!
+[2023-05-09T21:13:51.156+0000] {helpers.py:94} INFO - Utah Jazz: Successfully scraped!
+[2023-05-09T21:13:55.603+0000] {helpers.py:94} INFO - Washington Wizards: Successfully scraped!
+[2023-05-09T21:13:55.619+0000] {helpers.py:109} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-09T21:13:55.620+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-09T21:13:55.634+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20220501T040000, start_date=20230509T211328, end_date=20230509T211355
+[2023-05-09T21:13:55.695+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-09T21:13:55.724+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

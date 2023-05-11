@@ -1,0 +1,48 @@
+[2023-04-29T16:54:10.661+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage manual__2023-04-29T16:54:09.178591+00:00 [queued]>
+[2023-04-29T16:54:10.669+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage manual__2023-04-29T16:54:09.178591+00:00 [queued]>
+[2023-04-29T16:54:10.670+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T16:54:10.671+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-29T16:54:10.672+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T16:54:10.682+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): push_csv_to_cloud_storage> on 2023-04-29 16:54:09.178591+00:00
+[2023-04-29T16:54:10.690+0000] {standard_task_runner.py:55} INFO - Started process 539 to run task
+[2023-04-29T16:54:10.695+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'push_to_bigquery', 'push_csv_to_cloud_storage', 'manual__2023-04-29T16:54:09.178591+00:00', '--job-id', '1781', '--raw', '--subdir', 'DAGS_FOLDER/push_to_bigquery_dag.py', '--cfg-path', '/tmp/tmpun1socv1']
+[2023-04-29T16:54:10.698+0000] {standard_task_runner.py:83} INFO - Job 1781: Subtask push_csv_to_cloud_storage
+[2023-04-29T16:54:10.775+0000] {task_command.py:389} INFO - Running <TaskInstance: push_to_bigquery.push_csv_to_cloud_storage manual__2023-04-29T16:54:09.178591+00:00 [running]> on host b5cee175690f
+[2023-04-29T16:54:10.843+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=push_to_bigquery
+AIRFLOW_CTX_TASK_ID=push_csv_to_cloud_storage
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-29T16:54:09.178591+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-29T16:54:09.178591+00:00
+[2023-04-29T16:54:11.244+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 29, in push_to_gcs
+    bucket = storage_client.get_bucket(bucket_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 772, in get_bucket
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/bucket.py", line 1094, in reload
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_helpers.py", line 252, in reload
+    _target_object=self,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 379, in _get_resource
+    _target_object=_target_object,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 GET https://storage.googleapis.com/storage/v1/b/trendba-bucket-1?projection=noAcl&prettyPrint=false: data-stuff@trendba.iam.gserviceaccount.com does not have storage.buckets.get access to the Google Cloud Storage bucket. Permission 'storage.buckets.get' denied on resource (or it may not exist).
+[2023-04-29T16:54:11.267+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=push_to_bigquery, task_id=push_csv_to_cloud_storage, execution_date=20230429T165409, start_date=20230429T165410, end_date=20230429T165411
+[2023-04-29T16:54:11.278+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1781 for task push_csv_to_cloud_storage (403 GET https://storage.googleapis.com/storage/v1/b/trendba-bucket-1?projection=noAcl&prettyPrint=false: data-stuff@trendba.iam.gserviceaccount.com does not have storage.buckets.get access to the Google Cloud Storage bucket. Permission 'storage.buckets.get' denied on resource (or it may not exist).; 539)
+[2023-04-29T16:54:11.327+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-04-29T16:54:11.345+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,35 @@
+[2023-05-04T12:28:49.759+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-04T04:30:00+00:00 [queued]>
+[2023-05-04T12:28:49.856+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-04T04:30:00+00:00 [queued]>
+[2023-05-04T12:28:49.863+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T12:28:49.880+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-04T12:28:49.883+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T12:28:49.965+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-04 04:30:00+00:00
+[2023-05-04T12:28:50.031+0000] {standard_task_runner.py:55} INFO - Started process 40269 to run task
+[2023-05-04T12:28:50.060+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-04T04:30:00+00:00', '--job-id', '2492', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmp22_oame9']
+[2023-05-04T12:28:50.084+0000] {standard_task_runner.py:83} INFO - Job 2492: Subtask scrape_teams_25-30
+[2023-05-04T12:28:50.604+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-04T04:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-04T12:28:50.985+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-04T04:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-04T04:30:00+00:00
+[2023-05-04T13:47:47.732+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-04T13:47:49.124+0000] {helpers.py:80} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-04T13:47:53.563+0000] {helpers.py:80} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-04T14:40:06.094+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-04T14:40:06.129+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 40269. PIDs of all processes in the group: [40269]
+[2023-05-04T14:40:06.159+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 40269
+[2023-05-04T14:40:06.172+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-04T14:40:06.206+0000] {logging_mixin.py:137} INFO - Task received SIGTERM signal
+[2023-05-04T14:40:06.222+0000] {helpers.py:86} ERROR - Task received SIGTERM signal
+[2023-05-04T14:40:06.225+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-04T15:21:42.345+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=40269, name='airflow task ru', status='sleeping', started='12:28:49') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-04T15:21:42.368+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 40269
+[2023-05-04T15:21:42.773+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=40269, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='12:28:49') (40269) terminated with exit code Negsignal.SIGKILL
+[2023-05-04T15:21:42.778+0000] {standard_task_runner.py:170} ERROR - Job 2492 was killed before it finished (likely due to running out of memory)

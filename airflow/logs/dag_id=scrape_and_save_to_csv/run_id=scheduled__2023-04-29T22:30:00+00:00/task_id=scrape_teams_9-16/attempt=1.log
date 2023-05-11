@@ -1,0 +1,144 @@
+[2023-04-29T23:33:41.253+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-29T22:30:00+00:00 [queued]>
+[2023-04-29T23:33:41.277+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-29T22:30:00+00:00 [queued]>
+[2023-04-29T23:33:41.278+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T23:33:41.279+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-29T23:33:41.281+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T23:33:41.299+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2023-04-29 22:30:00+00:00
+[2023-04-29T23:33:41.308+0000] {standard_task_runner.py:55} INFO - Started process 2934 to run task
+[2023-04-29T23:33:41.317+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2023-04-29T22:30:00+00:00', '--job-id', '1840', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmpna_3h1j9']
+[2023-04-29T23:33:41.322+0000] {standard_task_runner.py:83} INFO - Job 1840: Subtask scrape_teams_9-16
+[2023-04-29T23:33:41.439+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-29T22:30:00+00:00 [running]> on host b5cee175690f
+[2023-04-29T23:33:41.544+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-29T22:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-29T22:30:00+00:00
+[2023-04-29T23:33:41.555+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:41.557+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-29T23:33:42.565+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4322d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:42.566+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-29T23:33:43.576+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:43.579+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-29T23:33:44.586+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4322d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:44.589+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-29T23:33:45.598+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:45.600+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-29T23:33:46.609+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4322d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:46.609+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-29T23:33:47.630+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:47.635+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-29T23:33:48.663+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4322d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:48.667+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-29T23:33:49.684+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:49.685+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-29T23:33:50.737+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4322d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:50.741+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-29T23:33:51.752+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pistons&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:51.756+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-29T23:33:52.832+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:52.834+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-29T23:33:53.842+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432690>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:53.843+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-29T23:33:54.859+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:54.863+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-29T23:33:56.046+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432690>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:56.078+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-29T23:33:57.161+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:57.164+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-29T23:33:58.187+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432690>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:58.190+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-29T23:33:59.204+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:33:59.206+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-29T23:34:00.222+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432690>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:00.226+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-29T23:34:02.480+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:02.483+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-29T23:34:03.499+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432690>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:03.501+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-29T23:34:04.532+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Warriors&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:04.535+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-29T23:34:05.548+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:05.551+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-29T23:34:06.578+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4323d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:06.580+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-29T23:34:07.601+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:07.603+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-29T23:34:08.615+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4323d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-29T23:34:08.618+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T00:00:16.981+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:16.998+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T00:00:18.025+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4323d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:18.029+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T00:00:19.049+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:19.070+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T00:00:20.084+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4323d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:20.086+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T00:00:21.117+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:21.125+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T00:00:22.158+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4323d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:22.170+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T00:00:23.190+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Rockets&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:23.193+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T00:00:24.456+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:24.458+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T00:00:25.487+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432950>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:25.497+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T00:00:26.524+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:26.528+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T00:00:27.561+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432950>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:27.565+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T00:00:28.579+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:28.580+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T00:00:29.589+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432950>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:29.591+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T00:00:30.617+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:30.626+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T00:00:31.658+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432950>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:31.666+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T00:00:32.693+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:32.699+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T00:00:33.721+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432950>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:33.723+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T00:00:34.734+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Pacers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:34.737+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T00:00:35.753+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:35.755+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T00:00:36.779+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432990>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:36.787+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T00:00:37.808+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:37.812+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T00:00:38.827+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432990>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:38.829+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T00:00:40.416+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:40.422+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T00:00:41.447+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432990>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:41.451+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T00:00:42.458+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:42.460+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T00:00:43.467+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432990>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:43.468+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T00:00:44.479+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c4324d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:44.480+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T00:00:45.501+0000] {helpers.py:73} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/comment/?q=Clippers&after=30m&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff6c432990>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-04-30T00:00:45.517+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T00:02:36.549+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-04-30T00:02:36.593+0000] {helpers.py:69} INFO - Clippers: Successfully scraped!
+[2023-04-30T00:02:37.984+0000] {helpers.py:69} INFO - Lakers: Successfully scraped!
+[2023-04-30T00:02:39.366+0000] {helpers.py:69} INFO - Grizzlies: Successfully scraped!
+[2023-04-30T00:02:40.089+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T00:02:40.154+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T00:02:41.546+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T00:02:41.552+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T00:02:42.958+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T00:02:42.962+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T00:02:43.711+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-04-30T00:02:43.728+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 2934. PIDs of all processes in the group: [2934]
+[2023-04-30T00:02:43.731+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 2934
+[2023-04-30T00:02:43.737+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-04-30T00:02:43.871+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2934, status='terminated', exitcode=0, started='23:33:40') (2934) terminated with exit code 0

@@ -1,0 +1,37 @@
+[2023-05-10T06:14:57.965+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-10T05:00:00+00:00 [queued]>
+[2023-05-10T06:14:58.003+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-10T05:00:00+00:00 [queued]>
+[2023-05-10T06:14:58.006+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T06:14:58.033+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T06:14:58.035+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T06:14:58.080+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_1-8> on 2023-05-10 05:00:00+00:00
+[2023-05-10T06:14:58.120+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_1-8', 'scheduled__2023-05-10T05:00:00+00:00', '--job-id', '4145', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp41ttpjge']
+[2023-05-10T06:14:58.129+0000] {standard_task_runner.py:83} INFO - Job 4145: Subtask scrape_teams_1-8
+[2023-05-10T06:14:58.111+0000] {standard_task_runner.py:55} INFO - Started process 20747 to run task
+[2023-05-10T06:14:58.481+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-10T05:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T06:14:58.609+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T06:14:58.671+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_1-8
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T05:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-10T05:00:00+00:00
+[2023-05-10T06:15:15.493+0000] {sessions.py:161} WARNING - Retrying due to ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='oauth.reddit.com', port=443): Read timed out. (read timeout=16.0)")) status: GET https://oauth.reddit.com/r/AtlantaHawks/comments/
+[2023-05-10T06:15:18.146+0000] {helpers.py:95} INFO - Atlanta Hawks: Successfully scraped!
+[2023-05-10T06:15:22.336+0000] {helpers.py:95} INFO - Boston Celtics: Successfully scraped!
+[2023-05-10T06:15:23.011+0000] {helpers.py:95} INFO - Brooklyn Nets: Successfully scraped!
+[2023-05-10T06:15:23.650+0000] {helpers.py:95} INFO - Charlotte Hornets: Successfully scraped!
+[2023-05-10T06:15:24.338+0000] {helpers.py:95} INFO - Chicago Bulls: Successfully scraped!
+[2023-05-10T06:50:45.248+0000] {helpers.py:95} INFO - Cleveland Cavaliers: Successfully scraped!
+[2023-05-10T06:50:45.996+0000] {helpers.py:95} INFO - Dallas Mavericks: Successfully scraped!
+[2023-05-10T06:50:55.004+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))) status: GET https://oauth.reddit.com/r/denvernuggets/comments/
+[2023-05-10T06:51:13.039+0000] {helpers.py:95} INFO - Denver Nuggets: Successfully scraped!
+[2023-05-10T06:51:13.051+0000] {helpers.py:110} INFO - Saved in /opt/***/data/output_scrape_teams_1-8.csv
+[2023-05-10T06:51:13.054+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T06:51:13.082+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_1-8, execution_date=20230510T050000, start_date=20230510T061457, end_date=20230510T065113
+[2023-05-10T06:51:13.206+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-10T06:51:13.252+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,122 @@
+[2023-05-01T14:41:22.800+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T13:30:00+00:00 [queued]>
+[2023-05-01T14:41:22.822+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T13:30:00+00:00 [queued]>
+[2023-05-01T14:41:22.823+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T14:41:22.824+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-01T14:41:22.829+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T14:41:22.867+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-01 13:30:00+00:00
+[2023-05-01T14:41:22.878+0000] {standard_task_runner.py:55} INFO - Started process 5854 to run task
+[2023-05-01T14:41:22.889+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-01T13:30:00+00:00', '--job-id', '2052', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmp0iy5jnwy']
+[2023-05-01T14:41:22.898+0000] {standard_task_runner.py:83} INFO - Job 2052: Subtask scrape_teams_25-30
+[2023-05-01T14:41:23.022+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T13:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-01T14:41:23.137+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T13:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T13:30:00+00:00
+[2023-05-01T14:41:23.150+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa0049410>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:23.152+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa0049410>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:23.153+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-01T14:41:24.163+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:24.165+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:24.166+0000] {helpers.py:87} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-01T14:41:25.176+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:25.178+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:25.179+0000] {helpers.py:87} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-01T14:41:26.200+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:26.201+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:26.202+0000] {helpers.py:87} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-01T14:41:27.217+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:27.219+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:27.220+0000] {helpers.py:87} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-01T14:41:28.229+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:28.230+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:28.231+0000] {helpers.py:87} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-01T14:41:29.239+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:29.241+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:29.245+0000] {helpers.py:87} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-01T14:41:30.262+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:30.267+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:30.268+0000] {helpers.py:87} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-01T14:41:31.290+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:31.293+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:31.294+0000] {helpers.py:87} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-01T14:41:32.303+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:32.305+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d090>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:32.307+0000] {helpers.py:87} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-01T14:41:33.323+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:33.327+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=ripcity&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:33.329+0000] {helpers.py:87} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-01T14:41:34.338+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:34.340+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:34.344+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-01T14:41:35.353+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:35.355+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:35.357+0000] {helpers.py:87} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-01T14:41:36.369+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:36.373+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:36.374+0000] {helpers.py:87} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-01T14:41:37.385+0000] {logging_mixin.py:137} INFO - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:37.389+0000] {helpers.py:86} ERROR - HTTPSConnectionPool(host='api.pushshift.io', port=443): Max retries exceeded with url: /reddit/search/submission/?subreddit=kings&sort=created_utc&sort_type=desc&size=500 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffffa005d3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-01T14:41:37.390+0000] {helpers.py:87} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-01T14:41:42.450+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-01T14:41:44.570+0000] {helpers.py:80} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-01T15:10:25.020+0000] {helpers.py:80} INFO - San Antonio Spurs: Successfully scraped!
+[2023-05-01T15:10:25.708+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:25.710+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:25.711+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-01T15:10:26.970+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:26.974+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:26.976+0000] {helpers.py:87} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-01T15:10:28.569+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:28.571+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:28.572+0000] {helpers.py:87} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-01T15:10:31.286+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:31.289+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:31.290+0000] {helpers.py:87} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-01T15:10:32.731+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:32.732+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:32.733+0000] {helpers.py:87} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-01T15:10:33.971+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:33.972+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:33.972+0000] {helpers.py:87} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-01T15:10:35.450+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:35.452+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:35.453+0000] {helpers.py:87} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-01T15:10:37.005+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:37.008+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:37.009+0000] {helpers.py:87} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-01T15:10:38.247+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:38.247+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:38.248+0000] {helpers.py:87} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-01T15:10:39.586+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:39.588+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:39.589+0000] {helpers.py:87} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-01T15:10:40.854+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:40.855+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:40.859+0000] {helpers.py:87} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-01T15:10:42.643+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:42.647+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:42.647+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-01T15:10:43.935+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:43.937+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:43.938+0000] {helpers.py:87} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-01T15:10:45.242+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:45.243+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:45.243+0000] {helpers.py:87} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-01T15:10:47.224+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:47.226+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-01T15:10:47.230+0000] {helpers.py:87} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-01T15:28:26.203+0000] {logging_mixin.py:137} INFO - ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2023-05-01T15:28:26.235+0000] {helpers.py:86} ERROR - ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2023-05-01T15:28:26.237+0000] {helpers.py:87} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-01T15:28:26.482+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-01T15:28:26.503+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 5854. PIDs of all processes in the group: [5854]
+[2023-05-01T15:28:26.509+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 5854
+[2023-05-01T15:28:26.511+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-01T15:28:26.702+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=5854, status='terminated', exitcode=0, started='14:41:22') (5854) terminated with exit code 0

@@ -1,0 +1,42 @@
+[2023-04-28T04:54:29.756+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [queued]>
+[2023-04-28T04:54:29.774+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [queued]>
+[2023-04-28T04:54:29.776+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T04:54:29.781+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-28T04:54:29.785+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-28T04:54:29.804+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): teams_9-16> on 2023-04-28 04:54:26.438549+00:00
+[2023-04-28T04:54:29.812+0000] {standard_task_runner.py:55} INFO - Started process 721 to run task
+[2023-04-28T04:54:29.825+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'reddit_scrape', 'teams_9-16', 'manual__2023-04-28T04:54:26.438549+00:00', '--job-id', '1649', '--raw', '--subdir', 'DAGS_FOLDER/reddit_scrape.py', '--cfg-path', '/tmp/tmpvmhouvh0']
+[2023-04-28T04:54:29.829+0000] {standard_task_runner.py:83} INFO - Job 1649: Subtask teams_9-16
+[2023-04-28T04:54:29.962+0000] {task_command.py:389} INFO - Running <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]> on host 06bfdeeadc0b
+[2023-04-28T04:54:30.079+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=reddit_scrape
+AIRFLOW_CTX_TASK_ID=teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-28T04:54:26.438549+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-28T04:54:26.438549+00:00
+[2023-04-28T04:54:31.984+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:31.986+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:33.117+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:33.118+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:33.862+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:33.865+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:34.473+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:34.475+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:35.812+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:35.814+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:37.747+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:37.750+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:38.466+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:38.472+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:39.098+0000] {reddit_scrape.py:41} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-28T04:54:39.102+0000] {reddit_scrape.py:42} ERROR - Response was b'<html>\r\n<head><title>429 Too Many Requests</title></head>\r\n<body>\r\n<center><h1>429 Too Many Requests</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n'
+[2023-04-28T04:54:39.111+0000] {reddit_scrape.py:43} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-28T04:54:41.498+0000] {reddit_scrape.py:36} INFO - /opt/***/output_<bound method TaskInstance.__repr__ of <TaskInstance: reddit_scrape.teams_9-16 manual__2023-04-28T04:54:26.438549+00:00 [running]>>.csv
+[2023-04-28T04:54:41.500+0000] {reddit_scrape.py:37} INFO - Success!
+[2023-04-28T04:54:41.502+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-28T04:54:41.513+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=reddit_scrape, task_id=teams_9-16, execution_date=20230428T045426, start_date=20230428T045429, end_date=20230428T045441
+[2023-04-28T04:54:41.554+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-28T04:54:41.575+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

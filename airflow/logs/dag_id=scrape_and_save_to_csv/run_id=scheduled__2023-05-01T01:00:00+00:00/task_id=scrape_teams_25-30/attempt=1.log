@@ -1,0 +1,367 @@
+[2023-05-10T02:32:59.255+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:32:59.283+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:32:59.285+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:32:59.286+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:32:59.287+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:32:59.324+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-01 01:00:00+00:00
+[2023-05-10T02:32:59.341+0000] {standard_task_runner.py:55} INFO - Started process 17784 to run task
+[2023-05-10T02:32:59.384+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-01T01:00:00+00:00', '--job-id', '4031', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp9li_0xko']
+[2023-05-10T02:32:59.404+0000] {standard_task_runner.py:83} INFO - Job 4031: Subtask scrape_teams_25-30
+[2023-05-10T02:32:59.611+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:32:59.684+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:32:59.902+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T01:00:00+00:00
+[2023-05-10T02:33:01.496+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:01.498+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:01.499+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:33:03.260+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:03.272+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:03.274+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:33:05.021+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:05.022+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:05.024+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:33:06.863+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:06.866+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:06.868+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:33:08.981+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:08.990+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:08.994+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:33:10.708+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:10.710+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:10.715+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:33:12.447+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:12.448+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:12.449+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:33:14.245+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:14.246+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:14.247+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:33:16.495+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:16.496+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:16.497+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:33:18.390+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:18.392+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:18.400+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:33:20.244+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:30:42 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:20.246+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:20.248+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:33:22.571+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:22.575+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:22.577+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:33:24.457+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:24.460+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:24.462+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:33:26.271+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:26.278+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:26.280+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:33:28.153+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:28.155+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:28.156+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:33:29.863+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:29.865+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:29.868+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:33:31.598+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:31.621+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:31.623+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:33:33.370+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:33.373+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:33.375+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:33:35.089+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:35.091+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:35.094+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:33:36.782+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:36.783+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:36.784+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:33:40.535+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:40.537+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:40.540+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:33:46.901+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:32:51 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:46.903+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:46.905+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:33:53.837+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:33:53.841+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:33:53.843+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:34:01.726+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:01.728+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:01.729+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:34:09.431+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:09.434+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:09.437+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:34:17.401+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:17.403+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:17.409+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:34:24.894+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:24.897+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:24.899+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:34:32.559+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:32.562+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:32.566+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:34:40.265+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:40.277+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:40.279+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:34:48.687+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:48.691+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:48.693+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:34:56.851+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:34:56.855+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:34:56.871+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:35:04.604+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:04.609+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:04.611+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:35:12.745+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:18:22 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:12.747+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:12.749+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:35:20.402+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:20.404+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:20.407+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:35:28.736+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:28.739+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:28.741+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:35:37.123+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:37.125+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:37.126+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:35:44.853+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:44.856+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:44.858+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:35:52.581+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:35:52.589+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:35:52.592+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:36:00.788+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:00.793+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:00.800+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:36:08.591+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:08.593+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:08.594+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:36:16.884+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:33:34 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:16.888+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:16.889+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:36:24.764+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:36:09 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:24.768+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:24.771+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:36:32.982+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:36:09 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:32.983+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:32.984+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:36:40.763+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:36:30 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:40.767+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:40.768+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:36:48.433+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:48.440+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:48.441+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:36:56.765+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:36:56.773+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:36:56.775+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:37:04.525+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:04.528+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:04.530+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:37:12.802+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:12.804+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:12.805+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:37:20.759+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:20.761+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:20.762+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:37:29.026+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:29.028+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:29.030+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:37:36.797+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:36.800+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:36.809+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:37:44.818+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:44.820+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:44.821+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:37:53.033+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:37:53.037+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:37:53.039+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:38:00.724+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:00.726+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:00.727+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:38:08.890+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:31:41 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:08.893+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:08.895+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:38:17.166+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:17.169+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:17.171+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:38:25.091+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:25.096+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:25.099+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:38:33.134+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:33.137+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:33.139+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:38:39.188+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-10T02:38:39.196+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 17784. PIDs of all processes in the group: [17784]
+[2023-05-10T02:38:39.197+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 17784
+[2023-05-10T02:38:39.199+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-10T02:38:39.200+0000] {helpers.py:99} ERROR - Task received SIGTERM signal
+[2023-05-10T02:38:39.202+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:38:40.979+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:40.981+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:40.982+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:38:49.017+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:49.044+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:49.045+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:38:57.148+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:38:57.151+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:38:57.153+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:39:07.319+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:39:07.325+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:39:07.327+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:39:18.008+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:39:18.010+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:39:18.011+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:39:28.749+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:37:29 2023-05-01 00:00:00+00:00
+[2023-05-10T02:39:28.752+0000] {helpers.py:99} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:39:28.753+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:39:39.211+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=17784, name='airflow task ru', status='sleeping', started='02:32:58') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-10T02:39:39.227+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 17784
+[2023-05-10T02:39:39.403+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=17784, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='02:32:58') (17784) terminated with exit code Negsignal.SIGKILL
+[2023-05-10T02:39:39.409+0000] {standard_task_runner.py:170} ERROR - Job 4031 was killed before it finished (likely due to running out of memory)
+[2023-05-10T02:41:38.337+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:41:38.359+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:41:38.365+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:41:38.366+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:41:38.368+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:41:38.388+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-01 01:00:00+00:00
+[2023-05-10T02:41:38.400+0000] {standard_task_runner.py:55} INFO - Started process 18040 to run task
+[2023-05-10T02:41:38.413+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-01T01:00:00+00:00', '--job-id', '4053', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpcs4tp61h']
+[2023-05-10T02:41:38.418+0000] {standard_task_runner.py:83} INFO - Job 4053: Subtask scrape_teams_25-30
+[2023-05-10T02:41:38.567+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:41:38.623+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:41:38.669+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T01:00:00+00:00
+[2023-05-10T02:41:40.248+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:41:40.250+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:41:40.252+0000] {helpers.py:101} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:41:50.928+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:41:50.933+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:41:50.938+0000] {helpers.py:101} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:42:00.901+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:00.905+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:00.906+0000] {helpers.py:101} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:42:10.357+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:10.359+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:10.361+0000] {helpers.py:101} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:42:19.022+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:19.025+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:19.027+0000] {helpers.py:101} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:42:27.202+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:27.224+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:27.225+0000] {helpers.py:101} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:42:35.386+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:35.388+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:35.390+0000] {helpers.py:101} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:42:43.659+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:43.665+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:43.669+0000] {helpers.py:101} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:42:49.516+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-05-10T02:42:49.552+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 18040. PIDs of all processes in the group: [18040]
+[2023-05-10T02:42:49.556+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 18040
+[2023-05-10T02:42:49.559+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-10T02:42:49.572+0000] {helpers.py:100} ERROR - Task received SIGTERM signal
+[2023-05-10T02:42:49.608+0000] {helpers.py:101} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:42:52.206+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:42:52.208+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:42:52.209+0000] {helpers.py:101} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:43:00.466+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:38:01 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:00.468+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:00.469+0000] {helpers.py:101} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:43:09.125+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:42:17 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:09.130+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:09.131+0000] {helpers.py:101} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:43:16.915+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:42:17 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:16.922+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:16.923+0000] {helpers.py:101} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:43:27.609+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:42:17 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:27.611+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:27.612+0000] {helpers.py:101} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:43:38.389+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:43:20 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:38.394+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:38.396+0000] {helpers.py:101} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:43:49.114+0000] {logging_mixin.py:137} INFO - 2023-05-10 02:43:35 2023-05-01 00:00:00+00:00
+[2023-05-10T02:43:49.117+0000] {helpers.py:100} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:43:49.118+0000] {helpers.py:101} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:43:49.587+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=18040, name='airflow task ru', status='sleeping', started='02:41:38') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-10T02:43:49.608+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 18040
+[2023-05-10T02:43:49.711+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=18040, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='02:41:38') (18040) terminated with exit code Negsignal.SIGKILL
+[2023-05-10T02:43:49.721+0000] {standard_task_runner.py:170} ERROR - Job 4053 was killed before it finished (likely due to running out of memory)
+[2023-05-10T02:46:09.730+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:46:09.750+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T02:46:09.752+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:46:09.776+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:46:09.778+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:46:09.802+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-01 01:00:00+00:00
+[2023-05-10T02:46:09.811+0000] {standard_task_runner.py:55} INFO - Started process 18203 to run task
+[2023-05-10T02:46:09.818+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-01T01:00:00+00:00', '--job-id', '4072', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpx9nf9jef']
+[2023-05-10T02:46:09.826+0000] {standard_task_runner.py:83} INFO - Job 4072: Subtask scrape_teams_25-30
+[2023-05-10T02:46:09.972+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:46:10.014+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:46:10.055+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T01:00:00+00:00
+[2023-05-10T02:46:40.205+0000] {helpers.py:95} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-10T02:47:19.475+0000] {helpers.py:95} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-10T02:47:54.851+0000] {helpers.py:95} INFO - San Antonio Spurs: Successfully scraped!
+[2023-05-10T02:48:27.215+0000] {helpers.py:95} INFO - Toronto Raptors: Successfully scraped!
+[2023-05-10T02:49:04.778+0000] {helpers.py:95} INFO - Utah Jazz: Successfully scraped!
+[2023-05-10T02:49:09.918+0000] {helpers.py:95} INFO - Washington Wizards: Successfully scraped!
+[2023-05-10T02:49:09.939+0000] {helpers.py:110} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-10T02:49:09.941+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T02:49:09.969+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20230501T010000, start_date=20230510T024609, end_date=20230510T024909
+[2023-05-10T02:49:10.176+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-10T02:49:10.244+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-10T03:22:30.258+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T03:22:30.291+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [queued]>
+[2023-05-10T03:22:30.293+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T03:22:30.294+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T03:22:30.295+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T03:22:30.314+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_25-30> on 2023-05-01 01:00:00+00:00
+[2023-05-10T03:22:30.323+0000] {standard_task_runner.py:55} INFO - Started process 18620 to run task
+[2023-05-10T03:22:30.339+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_25-30', 'scheduled__2023-05-01T01:00:00+00:00', '--job-id', '4102', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmp_6t9stbp']
+[2023-05-10T03:22:30.349+0000] {standard_task_runner.py:83} INFO - Job 4102: Subtask scrape_teams_25-30
+[2023-05-10T03:22:30.464+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_25-30 scheduled__2023-05-01T01:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T03:22:30.500+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T03:22:30.562+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_25-30
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T01:00:00+00:00
+[2023-05-10T03:22:37.077+0000] {helpers.py:95} INFO - Portland Trail Blazers: Successfully scraped!
+[2023-05-10T03:22:42.281+0000] {helpers.py:95} INFO - Sacramento Kings: Successfully scraped!
+[2023-05-10T03:22:46.321+0000] {helpers.py:95} INFO - San Antonio Spurs: Successfully scraped!
+[2023-05-10T03:22:50.512+0000] {helpers.py:95} INFO - Toronto Raptors: Successfully scraped!
+[2023-05-10T03:23:05.404+0000] {helpers.py:95} INFO - Utah Jazz: Successfully scraped!
+[2023-05-10T03:23:43.709+0000] {helpers.py:95} INFO - Washington Wizards: Successfully scraped!
+[2023-05-10T03:23:43.727+0000] {helpers.py:110} INFO - Saved in /opt/***/data/output_scrape_teams_25-30.csv
+[2023-05-10T03:23:43.730+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T03:23:43.755+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_25-30, execution_date=20230501T010000, start_date=20230510T032230, end_date=20230510T032343
+[2023-05-10T03:23:43.854+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-10T03:23:43.882+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

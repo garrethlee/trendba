@@ -1,0 +1,44 @@
+[2023-05-03T12:38:33.055+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-03T04:30:00+00:00 [queued]>
+[2023-05-03T12:38:33.179+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-03T04:30:00+00:00 [queued]>
+[2023-05-03T12:38:33.208+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T12:38:33.213+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-03T12:38:33.217+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-03T12:38:33.296+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2023-05-03 04:30:00+00:00
+[2023-05-03T12:38:33.381+0000] {standard_task_runner.py:55} INFO - Started process 31586 to run task
+[2023-05-03T12:38:33.400+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2023-05-03T04:30:00+00:00', '--job-id', '2340', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmp7oj16mdk']
+[2023-05-03T12:38:33.442+0000] {standard_task_runner.py:83} INFO - Job 2340: Subtask scrape_teams_9-16
+[2023-05-03T12:38:34.157+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-03T04:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-03T12:38:34.662+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-03T04:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-03T04:30:00+00:00
+[2023-05-03T14:17:48.175+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-03T14:17:48.748+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 31586. PIDs of all processes in the group: [31586]
+[2023-05-03T14:17:48.754+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 31586
+[2023-05-03T14:17:48.789+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-03T14:17:48.986+0000] {logging_mixin.py:137} INFO - Task received SIGTERM signal
+[2023-05-03T14:17:49.008+0000] {helpers.py:86} ERROR - Task received SIGTERM signal
+[2023-05-03T14:17:49.010+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-03T14:17:53.910+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-03T14:17:55.769+0000] {helpers.py:80} INFO - Detroit Pistons: Successfully scraped!
+[2023-05-03T14:17:59.518+0000] {helpers.py:80} INFO - Golden State Warriors: Successfully scraped!
+[2023-05-03T14:17:59.702+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-03T14:17:59.706+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-03T14:17:59.711+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-03T14:18:00.878+0000] {logging_mixin.py:137} INFO - Expecting value: line 1 column 1 (char 0)
+[2023-05-03T14:18:00.882+0000] {helpers.py:86} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-05-03T14:18:00.883+0000] {helpers.py:87} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-03T14:18:05.693+0000] {helpers.py:80} INFO - Houston Rockets: Successfully scraped!
+[2023-05-03T14:52:13.076+0000] {helpers.py:80} INFO - Indiana Pacers: Successfully scraped!
+[2023-05-03T14:52:19.601+0000] {helpers.py:80} INFO - Los Angeles Clippers: Successfully scraped!
+[2023-05-03T16:13:17.963+0000] {process_utils.py:147} WARNING - process psutil.Process(pid=31586, name='airflow task ru', status='sleeping', started='12:38:32') did not respond to SIGTERM. Trying SIGKILL
+[2023-05-03T16:13:18.026+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGKILL to group 31586
+[2023-05-03T16:13:20.357+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=31586, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='12:38:32') (31586) terminated with exit code Negsignal.SIGKILL
+[2023-05-03T16:13:20.364+0000] {standard_task_runner.py:170} ERROR - Job 2340 was killed before it finished (likely due to running out of memory)

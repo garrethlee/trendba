@@ -1,0 +1,42 @@
+[2023-05-10T14:51:42.951+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T13:00:00+00:00 [queued]>
+[2023-05-10T14:51:42.974+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T13:00:00+00:00 [queued]>
+[2023-05-10T14:51:42.977+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T14:51:42.983+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T14:51:42.986+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T14:51:43.010+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2023-05-10 13:00:00+00:00
+[2023-05-10T14:51:43.025+0000] {standard_task_runner.py:55} INFO - Started process 21214 to run task
+[2023-05-10T14:51:43.037+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2023-05-10T13:00:00+00:00', '--job-id', '4170', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpfi7fyoqf']
+[2023-05-10T14:51:43.045+0000] {standard_task_runner.py:83} INFO - Job 4170: Subtask scrape_teams_9-16
+[2023-05-10T14:51:43.205+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T13:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T14:51:43.246+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T14:51:43.298+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T13:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-10T13:00:00+00:00
+[2023-05-10T16:29:24.849+0000] {sessions.py:161} WARNING - Retrying due to ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=16.0)")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T16:29:26.632+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(ProtocolError('Connection aborted.', OSError(0, 'Error'))) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T16:29:32.263+0000] {helpers.py:95} INFO - Detroit Pistons: Successfully scraped!
+[2023-05-10T16:29:39.238+0000] {helpers.py:95} INFO - Golden State Warriors: Successfully scraped!
+[2023-05-10T16:29:40.322+0000] {helpers.py:95} INFO - Houston Rockets: Successfully scraped!
+[2023-05-10T17:09:51.278+0000] {helpers.py:95} INFO - Indiana Pacers: Successfully scraped!
+[2023-05-10T17:09:52.573+0000] {helpers.py:95} INFO - Los Angeles Clippers: Successfully scraped!
+[2023-05-10T17:09:58.370+0000] {helpers.py:95} INFO - Los Angeles Lakers: Successfully scraped!
+[2023-05-10T17:09:58.882+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-10T17:09:58.888+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 21214. PIDs of all processes in the group: [21214]
+[2023-05-10T17:09:58.890+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 21214
+[2023-05-10T17:09:58.892+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-10T17:09:58.893+0000] {helpers.py:100} ERROR - error with request Task received SIGTERM signal
+[2023-05-10T17:09:58.894+0000] {helpers.py:101} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T17:10:01.291+0000] {helpers.py:95} INFO - Memphis Grizzlies: Successfully scraped!
+[2023-05-10T17:10:34.498+0000] {helpers.py:95} INFO - Miami Heat: Successfully scraped!
+[2023-05-10T17:10:34.511+0000] {helpers.py:110} INFO - Saved in /opt/***/data/output_scrape_teams_9-16.csv
+[2023-05-10T17:10:34.512+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T17:10:34.535+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_9-16, execution_date=20230510T130000, start_date=20230510T145142, end_date=20230510T171034
+[2023-05-10T17:10:34.622+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=21214, status='terminated', exitcode=0, started='14:51:42') (21214) terminated with exit code 0

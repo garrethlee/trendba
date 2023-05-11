@@ -1,0 +1,119 @@
+[2023-04-30T15:40:16.623+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-30T06:30:00+00:00 [queued]>
+[2023-04-30T15:40:16.644+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-30T06:30:00+00:00 [queued]>
+[2023-04-30T15:40:16.654+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30T15:40:16.656+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-30T15:40:16.657+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-30T15:40:16.700+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2023-04-30 06:30:00+00:00
+[2023-04-30T15:40:16.724+0000] {standard_task_runner.py:55} INFO - Started process 72 to run task
+[2023-04-30T15:40:16.752+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2023-04-30T06:30:00+00:00', '--job-id', '1897', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmpccwdjt1y']
+[2023-04-30T15:40:16.759+0000] {standard_task_runner.py:83} INFO - Job 1897: Subtask scrape_teams_9-16
+[2023-04-30T15:40:17.041+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-04-30T06:30:00+00:00 [running]> on host b5cee175690f
+[2023-04-30T15:40:17.237+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-30T06:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-30T06:30:00+00:00
+[2023-04-30T15:40:18.320+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-04-30T15:40:18.325+0000] {helpers.py:69} INFO - Pistons: Successfully scraped!
+[2023-04-30T15:40:19.840+0000] {helpers.py:69} INFO - Warriors: Successfully scraped!
+[2023-04-30T15:40:20.543+0000] {helpers.py:69} INFO - Rockets: Successfully scraped!
+[2023-04-30T15:40:21.403+0000] {helpers.py:69} INFO - Pacers: Successfully scraped!
+[2023-04-30T15:40:21.628+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:21.629+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T15:40:22.985+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:22.986+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T15:40:24.224+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:24.227+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T15:40:25.438+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:25.441+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T15:40:26.785+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:26.786+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T15:40:28.145+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:28.147+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T15:40:29.351+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:29.353+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T15:40:30.589+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:30.591+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T15:40:31.823+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:31.824+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T15:40:33.109+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:33.110+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T15:40:34.337+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:34.339+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T15:40:35.703+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:35.704+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T15:40:36.941+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:36.947+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T15:40:38.194+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:38.195+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T15:40:39.405+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:39.407+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T15:40:40.713+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:40.731+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T15:40:41.954+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:41.956+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T15:40:43.165+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:43.166+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T15:40:44.376+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:44.377+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T15:40:45.715+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:45.716+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T15:40:46.954+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:46.955+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T15:40:48.181+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:48.182+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T15:40:49.389+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:49.391+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T15:40:50.789+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:50.792+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T15:40:52.039+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:52.040+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T15:40:53.205+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:53.207+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T15:40:54.840+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:54.842+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T15:40:56.156+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:56.157+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T15:40:57.342+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:57.343+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T15:40:58.582+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:58.588+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T15:40:59.924+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:40:59.926+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T15:41:01.181+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:01.183+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T15:41:02.392+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:02.393+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T15:41:03.601+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:03.602+0000] {helpers.py:74} ERROR - Retrying! 9 attempts before skipping!
+[2023-04-30T15:41:04.815+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:04.816+0000] {helpers.py:74} ERROR - Retrying! 8 attempts before skipping!
+[2023-04-30T15:41:06.195+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:06.196+0000] {helpers.py:74} ERROR - Retrying! 7 attempts before skipping!
+[2023-04-30T15:41:07.426+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:07.427+0000] {helpers.py:74} ERROR - Retrying! 6 attempts before skipping!
+[2023-04-30T15:41:08.659+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:08.660+0000] {helpers.py:74} ERROR - Retrying! 5 attempts before skipping!
+[2023-04-30T15:41:09.870+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:09.871+0000] {helpers.py:74} ERROR - Retrying! 4 attempts before skipping!
+[2023-04-30T15:41:11.292+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:11.293+0000] {helpers.py:74} ERROR - Retrying! 3 attempts before skipping!
+[2023-04-30T15:41:12.644+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:12.645+0000] {helpers.py:74} ERROR - Retrying! 2 attempts before skipping!
+[2023-04-30T15:41:13.860+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:13.860+0000] {helpers.py:74} ERROR - Retrying! 1 attempts before skipping!
+[2023-04-30T15:41:15.067+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:15.068+0000] {helpers.py:74} ERROR - Retrying! 0 attempts before skipping!
+[2023-04-30T15:41:16.316+0000] {helpers.py:73} ERROR - Expecting value: line 1 column 1 (char 0)
+[2023-04-30T15:41:16.318+0000] {helpers.py:74} ERROR - Retrying! -1 attempts before skipping!
+[2023-04-30T15:41:17.323+0000] {helpers.py:83} INFO - Saved in /opt/***/data/output_scrape_teams_9-16.csv
+[2023-04-30T15:41:17.326+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-30T15:41:17.338+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_9-16, execution_date=20230430T063000, start_date=20230430T154016, end_date=20230430T154117
+[2023-04-30T15:41:17.367+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-30T15:41:17.408+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

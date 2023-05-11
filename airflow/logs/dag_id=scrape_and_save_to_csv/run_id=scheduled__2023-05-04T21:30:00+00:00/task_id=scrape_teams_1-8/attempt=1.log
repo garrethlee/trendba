@@ -1,0 +1,35 @@
+[2023-05-04T23:08:00.079+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T21:30:00+00:00 [queued]>
+[2023-05-04T23:08:00.105+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T21:30:00+00:00 [queued]>
+[2023-05-04T23:08:00.113+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T23:08:00.115+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-04T23:08:00.117+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T23:08:00.141+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_1-8> on 2023-05-04 21:30:00+00:00
+[2023-05-04T23:08:00.154+0000] {standard_task_runner.py:55} INFO - Started process 45533 to run task
+[2023-05-04T23:08:00.177+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_1-8', 'scheduled__2023-05-04T21:30:00+00:00', '--job-id', '2590', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmptjt8gow2']
+[2023-05-04T23:08:00.185+0000] {standard_task_runner.py:83} INFO - Job 2590: Subtask scrape_teams_1-8
+[2023-05-04T23:08:00.338+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T21:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-04T23:08:00.494+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_1-8
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-04T21:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-04T21:30:00+00:00
+[2023-05-04T23:11:36.033+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-04T23:11:36.379+0000] {helpers.py:80} INFO - Atlanta Hawks: Successfully scraped!
+[2023-05-04T23:12:15.374+0000] {helpers.py:80} INFO - Boston Celtics: Successfully scraped!
+[2023-05-04T23:12:19.922+0000] {helpers.py:80} INFO - Brooklyn Nets: Successfully scraped!
+[2023-05-04T23:12:23.480+0000] {helpers.py:80} INFO - Charlotte Hornets: Successfully scraped!
+[2023-05-04T23:12:27.669+0000] {helpers.py:80} INFO - Chicago Bulls: Successfully scraped!
+[2023-05-04T23:12:31.306+0000] {helpers.py:80} INFO - Cleveland Cavaliers: Successfully scraped!
+[2023-05-04T23:12:34.602+0000] {helpers.py:80} INFO - Dallas Mavericks: Successfully scraped!
+[2023-05-04T23:12:39.002+0000] {helpers.py:80} INFO - Denver Nuggets: Successfully scraped!
+[2023-05-04T23:12:39.026+0000] {helpers.py:96} INFO - Saved in /opt/***/data/output_scrape_teams_1-8.csv
+[2023-05-04T23:12:39.029+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-04T23:12:39.041+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_1-8, execution_date=20230504T213000, start_date=20230504T230800, end_date=20230504T231239
+[2023-05-04T23:12:39.115+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-04T23:12:39.139+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

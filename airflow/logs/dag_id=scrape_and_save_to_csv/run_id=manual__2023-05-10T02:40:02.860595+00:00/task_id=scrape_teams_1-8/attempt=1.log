@@ -1,0 +1,41 @@
+[2023-05-10T02:40:06.755+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 manual__2023-05-10T02:40:02.860595+00:00 [queued]>
+[2023-05-10T02:40:06.791+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 manual__2023-05-10T02:40:02.860595+00:00 [queued]>
+[2023-05-10T02:40:06.793+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:40:06.794+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:40:06.797+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:40:06.847+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_1-8> on 2023-05-10 02:40:02.860595+00:00
+[2023-05-10T02:40:06.879+0000] {standard_task_runner.py:55} INFO - Started process 18004 to run task
+[2023-05-10T02:40:06.889+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_1-8', 'manual__2023-05-10T02:40:02.860595+00:00', '--job-id', '4050', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpxrsyecyg']
+[2023-05-10T02:40:06.901+0000] {standard_task_runner.py:83} INFO - Job 4050: Subtask scrape_teams_1-8
+[2023-05-10T02:40:07.037+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 manual__2023-05-10T02:40:02.860595+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:40:07.128+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:40:07.181+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_1-8
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T02:40:02.860595+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-10T02:40:02.860595+00:00
+[2023-05-10T02:40:08.688+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:40:08.690+0000] {helpers.py:99} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:40:18.393+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:40:18.395+0000] {helpers.py:99} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:40:29.036+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:40:29.039+0000] {helpers.py:99} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:40:39.844+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:40:39.846+0000] {helpers.py:99} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:40:50.642+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:40:50.648+0000] {helpers.py:99} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:41:01.277+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:41:01.278+0000] {helpers.py:99} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:41:11.926+0000] {helpers.py:98} ERROR - can't compare offset-naive and offset-aware datetimes
+[2023-05-10T02:41:11.929+0000] {helpers.py:99} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:41:12.598+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-10T02:41:12.609+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 18004. PIDs of all processes in the group: [18004]
+[2023-05-10T02:41:12.611+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 18004
+[2023-05-10T02:41:12.612+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-10T02:41:12.664+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=18004, status='terminated', exitcode=0, started='02:40:06') (18004) terminated with exit code 0

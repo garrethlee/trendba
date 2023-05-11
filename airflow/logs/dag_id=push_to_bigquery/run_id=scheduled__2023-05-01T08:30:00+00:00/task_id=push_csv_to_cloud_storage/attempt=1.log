@@ -1,0 +1,42 @@
+[2023-05-01T09:42:24.194+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T08:30:00+00:00 [queued]>
+[2023-05-01T09:42:24.220+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T08:30:00+00:00 [queued]>
+[2023-05-01T09:42:24.228+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T09:42:24.231+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-01T09:42:24.235+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-01T09:42:24.267+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): push_csv_to_cloud_storage> on 2023-05-01 08:30:00+00:00
+[2023-05-01T09:42:24.273+0000] {standard_task_runner.py:55} INFO - Started process 5727 to run task
+[2023-05-01T09:42:24.280+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'push_to_bigquery', 'push_csv_to_cloud_storage', 'scheduled__2023-05-01T08:30:00+00:00', '--job-id', '2031', '--raw', '--subdir', 'DAGS_FOLDER/push_to_bigquery_dag.py', '--cfg-path', '/tmp/tmpmllk8az9']
+[2023-05-01T09:42:24.287+0000] {standard_task_runner.py:83} INFO - Job 2031: Subtask push_csv_to_cloud_storage
+[2023-05-01T09:42:24.396+0000] {task_command.py:389} INFO - Running <TaskInstance: push_to_bigquery.push_csv_to_cloud_storage scheduled__2023-05-01T08:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-01T09:42:24.449+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-01T09:42:24.497+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=push_to_bigquery
+AIRFLOW_CTX_TASK_ID=push_csv_to_cloud_storage
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-01T08:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-01T08:30:00+00:00
+[2023-05-01T09:42:24.567+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfd2250>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:24.572+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfd29d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:24.577+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfd2d50>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:25.975+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84710>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:25.981+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84d10>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:25.988+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8d110>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:27.575+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8da90>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:27.581+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf97110>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:27.587+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf97590>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:33.922+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf8d4d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:33.929+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84bd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:33.934+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bf84d50>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:37.121+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa01d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:37.126+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa0690>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T09:42:37.130+0000] {connectionpool.py:813} WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9bfa0b10>: Failed to establish a new connection: [Errno -2] Name or service not known')': /token
+[2023-05-01T10:49:06.855+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-01T10:49:06.880+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 5727. PIDs of all processes in the group: [5727]
+[2023-05-01T10:49:06.882+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 5727
+[2023-05-01T10:49:06.890+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-01T10:49:06.975+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=5727, status='terminated', exitcode=0, started='09:42:23') (5727) terminated with exit code 0

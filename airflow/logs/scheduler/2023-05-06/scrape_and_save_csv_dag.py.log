@@ -1,0 +1,439 @@
+[2023-05-06T23:41:38.464+0000] {processor.py:153} INFO - Started process (PID=36) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:41:38.469+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:41:38.481+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:41:38.480+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:41:39.829+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:41:39.928+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:41:39.926+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:41:39.973+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:41:39.973+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T22:30:00+00:00, run_after=2023-05-06T23:30:00+00:00
+[2023-05-06T23:41:40.018+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 1.569 seconds
+[2023-05-06T23:42:10.407+0000] {processor.py:153} INFO - Started process (PID=51) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:10.414+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:42:10.419+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:10.419+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:11.002+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:11.036+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:11.036+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:42:11.058+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:11.058+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:42:11.074+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.673 seconds
+[2023-05-06T23:42:41.389+0000] {processor.py:153} INFO - Started process (PID=63) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:41.461+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:42:41.468+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:41.468+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:42.261+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:42:42.496+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:42.494+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:42:42.563+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:42:42.563+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:42:42.616+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 1.234 seconds
+[2023-05-06T23:43:12.978+0000] {processor.py:153} INFO - Started process (PID=74) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:12.979+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:43:12.980+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:12.980+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:13.305+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:13.324+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:13.324+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:43:13.342+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:13.342+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:43:13.354+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.379 seconds
+[2023-05-06T23:43:43.646+0000] {processor.py:153} INFO - Started process (PID=85) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:43.648+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:43:43.650+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:43.650+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:44.137+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:43:44.159+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:44.159+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:43:44.176+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:43:44.176+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:43:44.189+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.546 seconds
+[2023-05-06T23:44:14.480+0000] {processor.py:153} INFO - Started process (PID=96) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:14.481+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:44:14.483+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:14.482+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:14.823+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:14.841+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:14.841+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:44:14.857+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:14.856+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:44:14.868+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.391 seconds
+[2023-05-06T23:44:45.291+0000] {processor.py:153} INFO - Started process (PID=107) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:45.293+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:44:45.294+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:45.294+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:45.598+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:44:45.616+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:45.615+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:44:45.632+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:44:45.632+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:44:45.643+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.355 seconds
+[2023-05-06T23:45:16.012+0000] {processor.py:153} INFO - Started process (PID=118) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:16.015+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:45:16.017+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:16.017+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:16.618+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:16.638+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:16.637+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:45:16.655+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:16.655+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:45:16.667+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.659 seconds
+[2023-05-06T23:45:47.096+0000] {processor.py:153} INFO - Started process (PID=129) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:47.112+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:45:47.115+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:47.115+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:47.627+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:45:47.652+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:47.651+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:45:47.678+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:45:47.678+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:45:47.692+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.601 seconds
+[2023-05-06T23:46:18.077+0000] {processor.py:153} INFO - Started process (PID=140) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:18.080+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:46:18.083+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:18.082+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:18.470+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:18.491+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:18.491+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:46:18.510+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:18.510+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:46:18.531+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.456 seconds
+[2023-05-06T23:46:49.077+0000] {processor.py:153} INFO - Started process (PID=152) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:49.104+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:46:49.105+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:49.105+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:49.408+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:46:49.425+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:49.425+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:46:49.441+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:46:49.441+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:46:49.452+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.380 seconds
+[2023-05-06T23:47:19.825+0000] {processor.py:153} INFO - Started process (PID=163) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:19.829+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:47:19.831+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:47:19.831+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:20.172+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:20.195+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:47:20.194+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:47:20.213+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:47:20.213+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:47:20.225+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.404 seconds
+[2023-05-06T23:47:50.595+0000] {processor.py:153} INFO - Started process (PID=174) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:50.597+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:47:50.599+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:47:50.599+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:50.635+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:47:50.632+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:47:50.638+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:47:50.666+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.075 seconds
+[2023-05-06T23:48:21.053+0000] {processor.py:153} INFO - Started process (PID=183) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:21.055+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:48:21.057+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:48:21.057+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:21.126+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:48:21.116+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:48:21.129+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:21.159+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.109 seconds
+[2023-05-06T23:48:51.562+0000] {processor.py:153} INFO - Started process (PID=192) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:51.565+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:48:51.567+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:48:51.567+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:51.589+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:48:51.586+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:48:51.590+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:48:51.615+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.056 seconds
+[2023-05-06T23:49:21.980+0000] {processor.py:153} INFO - Started process (PID=201) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:21.983+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:49:21.984+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:49:21.984+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:22.037+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:49:22.036+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:49:22.039+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:22.057+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.081 seconds
+[2023-05-06T23:49:52.553+0000] {processor.py:153} INFO - Started process (PID=210) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:52.556+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:49:52.558+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:49:52.558+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:52.585+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:49:52.582+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:49:52.588+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:49:52.611+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.063 seconds
+[2023-05-06T23:50:22.943+0000] {processor.py:153} INFO - Started process (PID=219) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:22.949+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:50:22.951+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:50:22.951+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:22.982+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:50:22.977+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:50:22.983+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:23.010+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.073 seconds
+[2023-05-06T23:50:53.314+0000] {processor.py:153} INFO - Started process (PID=228) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:53.316+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:50:53.317+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:50:53.317+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:53.346+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:50:53.335+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:50:53.347+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:50:53.363+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.052 seconds
+[2023-05-06T23:51:23.630+0000] {processor.py:153} INFO - Started process (PID=236) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:23.633+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:51:23.636+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:51:23.636+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:23.685+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:51:23.683+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:51:23.686+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:23.702+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.077 seconds
+[2023-05-06T23:51:54.075+0000] {processor.py:153} INFO - Started process (PID=246) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:54.080+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:51:54.082+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:51:54.081+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:54.130+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:51:54.103+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:51:54.131+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:51:54.150+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.081 seconds
+[2023-05-06T23:52:24.448+0000] {processor.py:153} INFO - Started process (PID=255) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:24.457+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:52:24.459+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:52:24.459+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:24.478+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:52:24.476+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:52:24.480+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:24.497+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.054 seconds
+[2023-05-06T23:52:54.812+0000] {processor.py:153} INFO - Started process (PID=265) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:54.815+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:52:54.820+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:52:54.820+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:54.842+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:52:54.840+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:52:54.843+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:52:54.867+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.061 seconds
+[2023-05-06T23:53:25.237+0000] {processor.py:153} INFO - Started process (PID=274) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:25.241+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:53:25.243+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:53:25.243+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:25.326+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:53:25.317+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:53:25.333+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:25.366+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.134 seconds
+[2023-05-06T23:53:55.578+0000] {processor.py:153} INFO - Started process (PID=284) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:55.582+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:53:55.583+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:53:55.583+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:55.631+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:53:55.628+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:53:55.633+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:53:55.653+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.085 seconds
+[2023-05-06T23:54:26.036+0000] {processor.py:153} INFO - Started process (PID=292) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:26.039+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:54:26.040+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:54:26.040+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:26.061+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:54:26.059+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 58
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:54:26.062+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:26.079+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.052 seconds
+[2023-05-06T23:54:56.492+0000] {processor.py:153} INFO - Started process (PID=301) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:56.494+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:54:56.502+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:54:56.502+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:56.520+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:54:56.519+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 59
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:54:56.521+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:54:56.539+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.050 seconds
+[2023-05-06T23:55:26.995+0000] {processor.py:153} INFO - Started process (PID=310) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:26.998+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:55:26.999+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:55:26.999+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:27.032+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:55:27.030+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 59
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:55:27.033+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:27.057+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.065 seconds
+[2023-05-06T23:55:57.377+0000] {processor.py:153} INFO - Started process (PID=320) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:57.382+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:55:57.386+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:55:57.386+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:57.435+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:55:57.409+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 59
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:55:57.437+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:55:57.453+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.080 seconds
+[2023-05-06T23:56:27.711+0000] {processor.py:153} INFO - Started process (PID=329) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:27.719+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:56:27.721+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:56:27.721+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:27.739+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:56:27.736+0000] {dagbag.py:341} ERROR - Failed to import: /opt/airflow/dags/scrape_and_save_csv_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scrape_and_save_csv_dag.py", line 10, in <module>
+    from helpers import *
+  File "/opt/airflow/dags/helpers.py", line 59
+    f"https://api.pushshift.io/reddit/search/submission/?subreddit={subreddit}&sort=created_utc&sort_type=desc&size=500&before={}"
+    ^
+SyntaxError: f-string: empty expression not allowed
+[2023-05-06T23:56:27.742+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:27.761+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.053 seconds
+[2023-05-06T23:56:58.204+0000] {processor.py:153} INFO - Started process (PID=338) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:58.207+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:56:58.209+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:56:58.209+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:58.687+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:56:58.735+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:56:58.734+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:56:58.752+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:56:58.752+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:56:58.770+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.570 seconds
+[2023-05-06T23:57:29.177+0000] {processor.py:153} INFO - Started process (PID=350) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:57:29.189+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:57:29.192+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:57:29.192+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:57:29.537+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:57:29.556+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:57:29.556+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:57:29.573+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:57:29.573+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:57:29.585+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.420 seconds
+[2023-05-06T23:57:59.856+0000] {processor.py:153} INFO - Started process (PID=361) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:57:59.858+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:57:59.860+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:57:59.860+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:00.210+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:00.229+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:00.229+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:58:00.251+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:00.251+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:58:00.263+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.413 seconds
+[2023-05-06T23:58:31.060+0000] {processor.py:153} INFO - Started process (PID=375) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:31.063+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:58:31.063+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:31.063+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:31.335+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:31.352+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:31.352+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:58:31.367+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:31.367+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:30:00+00:00, run_after=2023-05-07T00:30:00+00:00
+[2023-05-06T23:58:31.379+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.321 seconds
+[2023-05-06T23:58:45.579+0000] {processor.py:153} INFO - Started process (PID=386) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:45.586+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:58:45.605+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:45.605+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:45.938+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:58:45.975+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:45.975+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:58:45.989+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:58:45.989+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:00:00+00:00, run_after=2023-05-07T00:00:00+00:00
+[2023-05-06T23:58:46.004+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.427 seconds
+[2023-05-06T23:59:02.241+0000] {processor.py:153} INFO - Started process (PID=390) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:02.245+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:59:02.248+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:02.248+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:02.530+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:02.541+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:02.541+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:59:02.558+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:02.558+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:00:00+00:00, run_after=2023-05-07T00:00:00+00:00
+[2023-05-06T23:59:02.571+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.334 seconds
+[2023-05-06T23:59:33.125+0000] {processor.py:153} INFO - Started process (PID=401) to work on /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:33.168+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/scrape_and_save_csv_dag.py for tasks to queue
+[2023-05-06T23:59:33.171+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:33.170+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:33.563+0000] {processor.py:753} INFO - DAG(s) dict_keys(['scrape_and_save_to_csv']) retrieved from /opt/airflow/dags/scrape_and_save_csv_dag.py
+[2023-05-06T23:59:33.634+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:33.633+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-05-06T23:59:33.701+0000] {logging_mixin.py:137} INFO - [2023-05-06T23:59:33.701+0000] {dag.py:3456} INFO - Setting next_dagrun for scrape_and_save_to_csv to 2023-05-06T23:00:00+00:00, run_after=2023-05-07T00:00:00+00:00
+[2023-05-06T23:59:33.735+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/scrape_and_save_csv_dag.py took 0.615 seconds

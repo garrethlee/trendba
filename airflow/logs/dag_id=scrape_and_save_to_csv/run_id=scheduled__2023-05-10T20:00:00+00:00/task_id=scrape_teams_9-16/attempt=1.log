@@ -1,0 +1,59 @@
+[2023-05-10T21:00:34.489+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T20:00:00+00:00 [queued]>
+[2023-05-10T21:00:34.509+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T20:00:00+00:00 [queued]>
+[2023-05-10T21:00:34.510+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T21:00:34.517+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T21:00:34.521+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T21:00:34.537+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2023-05-10 20:00:00+00:00
+[2023-05-10T21:00:34.548+0000] {standard_task_runner.py:55} INFO - Started process 25507 to run task
+[2023-05-10T21:00:34.558+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2023-05-10T20:00:00+00:00', '--job-id', '4203', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpl9mfhevt']
+[2023-05-10T21:00:34.561+0000] {standard_task_runner.py:83} INFO - Job 4203: Subtask scrape_teams_9-16
+[2023-05-10T21:00:34.654+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-10T20:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T21:00:34.692+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T21:00:34.730+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T20:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-10T20:00:00+00:00
+[2023-05-10T21:00:34.762+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947fe490>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:36.720+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947fe590>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:39.394+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94807110>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:00:39.419+0000] {helpers.py:101} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T21:00:40.438+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff948073d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:41.859+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94807910>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:44.633+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947942d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:00:44.635+0000] {helpers.py:101} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T21:00:45.645+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94794510>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:46.647+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94794d50>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:49.113+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9479b110>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:00:49.116+0000] {helpers.py:101} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T21:00:50.125+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff9479b3d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:51.156+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947a6250>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:54.134+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947940d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:00:54.135+0000] {helpers.py:101} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T21:00:55.143+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94794810>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:00:56.663+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94794290>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:01:00.376+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94807a50>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:01:00.382+0000] {helpers.py:101} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T21:01:01.404+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff94807a90>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:01:01.783+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(MaxRetryError("HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947fef90>: Failed to establish a new connection: [Errno -2] Name or service not known'))")) status: GET https://oauth.reddit.com/r/DetroitPistons/comments/
+[2023-05-10T21:01:05.803+0000] {helpers.py:100} ERROR - error with request HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /api/v1/access_token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xffff947a6750>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2023-05-10T21:01:05.813+0000] {helpers.py:101} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T21:01:10.249+0000] {helpers.py:95} INFO - Detroit Pistons: Successfully scraped!
+[2023-05-10T21:01:15.796+0000] {helpers.py:95} INFO - Golden State Warriors: Successfully scraped!
+[2023-05-10T21:01:16.867+0000] {helpers.py:95} INFO - Houston Rockets: Successfully scraped!
+[2023-05-10T21:01:17.807+0000] {helpers.py:95} INFO - Indiana Pacers: Successfully scraped!
+[2023-05-10T21:01:18.631+0000] {helpers.py:95} INFO - Los Angeles Clippers: Successfully scraped!
+[2023-05-10T21:01:23.736+0000] {helpers.py:95} INFO - Los Angeles Lakers: Successfully scraped!
+[2023-05-10T21:01:24.595+0000] {helpers.py:95} INFO - Memphis Grizzlies: Successfully scraped!
+[2023-05-10T21:01:28.431+0000] {helpers.py:95} INFO - Miami Heat: Successfully scraped!
+[2023-05-10T21:01:28.440+0000] {helpers.py:110} INFO - Saved in /opt/***/data/output_scrape_teams_9-16.csv
+[2023-05-10T21:01:28.442+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T21:01:28.452+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_9-16, execution_date=20230510T200000, start_date=20230510T210034, end_date=20230510T210128
+[2023-05-10T21:01:28.510+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-10T21:01:28.567+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

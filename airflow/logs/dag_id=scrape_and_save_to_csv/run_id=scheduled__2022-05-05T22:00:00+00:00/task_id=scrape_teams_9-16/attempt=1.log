@@ -1,0 +1,119 @@
+[2023-05-10T02:05:06.938+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2022-05-05T22:00:00+00:00 [queued]>
+[2023-05-10T02:05:06.954+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2022-05-05T22:00:00+00:00 [queued]>
+[2023-05-10T02:05:06.959+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:05:06.960+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T02:05:06.961+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T02:05:06.976+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_9-16> on 2022-05-05 22:00:00+00:00
+[2023-05-10T02:05:06.984+0000] {standard_task_runner.py:55} INFO - Started process 17068 to run task
+[2023-05-10T02:05:06.999+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_9-16', 'scheduled__2022-05-05T22:00:00+00:00', '--job-id', '3995', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpjcyzij_f']
+[2023-05-10T02:05:07.003+0000] {standard_task_runner.py:83} INFO - Job 3995: Subtask scrape_teams_9-16
+[2023-05-10T02:05:07.119+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2022-05-05T22:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T02:05:07.185+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T02:05:07.249+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_9-16
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-05T22:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-05T22:00:00+00:00
+[2023-05-10T02:05:08.386+0000] {helpers.py:94} INFO - Detroit Pistons: Successfully scraped!
+[2023-05-10T02:05:09.112+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:09.114+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:05:10.811+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:10.815+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:05:14.017+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:14.022+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:05:17.719+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:17.722+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:05:21.444+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:21.448+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:05:25.175+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:25.180+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:05:28.874+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:28.879+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:05:33.082+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:33.086+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:05:37.276+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:37.283+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:05:40.965+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:40.968+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:05:45.175+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:45.176+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:05:48.860+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:48.862+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:05:53.047+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:53.051+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:05:57.234+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:05:57.236+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:06:00.945+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:00.948+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:06:05.155+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:05.158+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:06:08.827+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:08.837+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:06:13.022+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:13.024+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:06:17.200+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:17.205+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:06:21.020+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:21.024+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:06:24.699+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:24.701+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:06:28.408+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:28.412+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:06:32.074+0000] {helpers.py:94} INFO - Indiana Pacers: Successfully scraped!
+[2023-05-10T02:06:35.741+0000] {helpers.py:94} INFO - Los Angeles Clippers: Successfully scraped!
+[2023-05-10T02:06:39.992+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:39.994+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:06:44.200+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:44.205+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:06:47.955+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:47.963+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:06:52.347+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:52.349+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:06:56.137+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:56.140+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:06:59.904+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:06:59.906+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:07:04.136+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:04.137+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:07:07.866+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:07.870+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:07:12.076+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:12.095+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:07:16.315+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:16.319+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:07:20.087+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:20.089+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:07:24.252+0000] {helpers.py:94} INFO - Memphis Grizzlies: Successfully scraped!
+[2023-05-10T02:07:27.993+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:27.996+0000] {helpers.py:100} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-10T02:07:31.715+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:31.717+0000] {helpers.py:100} ERROR - Retrying! 8 attempts before skipping!
+[2023-05-10T02:07:34.950+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:34.951+0000] {helpers.py:100} ERROR - Retrying! 7 attempts before skipping!
+[2023-05-10T02:07:37.685+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:37.690+0000] {helpers.py:100} ERROR - Retrying! 6 attempts before skipping!
+[2023-05-10T02:07:39.935+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:39.938+0000] {helpers.py:100} ERROR - Retrying! 5 attempts before skipping!
+[2023-05-10T02:07:42.151+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:42.156+0000] {helpers.py:100} ERROR - Retrying! 4 attempts before skipping!
+[2023-05-10T02:07:43.877+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:43.878+0000] {helpers.py:100} ERROR - Retrying! 3 attempts before skipping!
+[2023-05-10T02:07:46.091+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:46.104+0000] {helpers.py:100} ERROR - Retrying! 2 attempts before skipping!
+[2023-05-10T02:07:48.355+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:48.357+0000] {helpers.py:100} ERROR - Retrying! 1 attempts before skipping!
+[2023-05-10T02:07:50.077+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:50.081+0000] {helpers.py:100} ERROR - Retrying! 0 attempts before skipping!
+[2023-05-10T02:07:52.307+0000] {helpers.py:99} ERROR - type object 'datetime.datetime' has no attribute 'datetime'
+[2023-05-10T02:07:52.308+0000] {helpers.py:100} ERROR - Retrying! -1 attempts before skipping!
+[2023-05-10T02:07:53.314+0000] {helpers.py:109} INFO - Saved in /opt/***/data/output_scrape_teams_9-16.csv
+[2023-05-10T02:07:53.316+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-10T02:07:53.334+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_9-16, execution_date=20220505T220000, start_date=20230510T020506, end_date=20230510T020753
+[2023-05-10T02:07:53.403+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-05-10T02:07:53.432+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

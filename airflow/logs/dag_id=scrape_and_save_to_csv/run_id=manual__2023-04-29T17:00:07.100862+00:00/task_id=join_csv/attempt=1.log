@@ -1,0 +1,23 @@
+[2023-04-29T17:01:18.395+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv manual__2023-04-29T17:00:07.100862+00:00 [queued]>
+[2023-04-29T17:01:18.405+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.join_csv manual__2023-04-29T17:00:07.100862+00:00 [queued]>
+[2023-04-29T17:01:18.406+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T17:01:18.407+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-29T17:01:18.407+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-29T17:01:18.416+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): join_csv> on 2023-04-29 17:00:07.100862+00:00
+[2023-04-29T17:01:18.422+0000] {standard_task_runner.py:55} INFO - Started process 748 to run task
+[2023-04-29T17:01:18.426+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'join_csv', 'manual__2023-04-29T17:00:07.100862+00:00', '--job-id', '1792', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmp8q6pt19o']
+[2023-04-29T17:01:18.431+0000] {standard_task_runner.py:83} INFO - Job 1792: Subtask join_csv
+[2023-04-29T17:01:18.517+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.join_csv manual__2023-04-29T17:00:07.100862+00:00 [running]> on host b5cee175690f
+[2023-04-29T17:01:18.576+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=join_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-29T17:00:07.100862+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-29T17:00:07.100862+00:00
+[2023-04-29T17:01:18.596+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-04-29T17:01:18.606+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=join_csv, execution_date=20230429T170007, start_date=20230429T170118, end_date=20230429T170118
+[2023-04-29T17:01:18.642+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-29T17:01:18.662+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,41 @@
+[2023-05-04T12:28:46.214+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T05:30:00+00:00 [queued]>
+[2023-05-04T12:28:46.258+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T05:30:00+00:00 [queued]>
+[2023-05-04T12:28:46.262+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T12:28:46.278+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-04T12:28:46.289+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-04T12:28:46.383+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): scrape_teams_1-8> on 2023-05-04 05:30:00+00:00
+[2023-05-04T12:28:46.430+0000] {standard_task_runner.py:55} INFO - Started process 40262 to run task
+[2023-05-04T12:28:46.452+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'scrape_teams_1-8', 'scheduled__2023-05-04T05:30:00+00:00', '--job-id', '2489', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_save_csv_dag.py', '--cfg-path', '/tmp/tmpijpnykic']
+[2023-05-04T12:28:46.460+0000] {standard_task_runner.py:83} INFO - Job 2489: Subtask scrape_teams_1-8
+[2023-05-04T12:28:47.427+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.scrape_teams_1-8 scheduled__2023-05-04T05:30:00+00:00 [running]> on host 5d4cd8acb346
+[2023-05-04T12:28:48.414+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=scrape_teams_1-8
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-04T05:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-04T05:30:00+00:00
+[2023-05-04T13:47:45.398+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-05-04T13:47:47.423+0000] {helpers.py:80} INFO - Atlanta Hawks: Successfully scraped!
+[2023-05-04T13:47:53.096+0000] {helpers.py:80} INFO - Boston Celtics: Successfully scraped!
+[2023-05-04T13:47:58.963+0000] {helpers.py:80} INFO - Brooklyn Nets: Successfully scraped!
+[2023-05-04T15:21:20.991+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-05-04T15:21:21.008+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 40262. PIDs of all processes in the group: [40262]
+[2023-05-04T15:21:21.010+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 40262
+[2023-05-04T15:21:21.016+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-05-04T15:21:21.027+0000] {logging_mixin.py:137} INFO - Task received SIGTERM signal
+[2023-05-04T15:21:21.029+0000] {helpers.py:86} ERROR - Task received SIGTERM signal
+[2023-05-04T15:21:21.030+0000] {helpers.py:87} ERROR - Retrying! 9 attempts before skipping!
+[2023-05-04T15:21:26.800+0000] {helpers.py:80} INFO - Charlotte Hornets: Successfully scraped!
+[2023-05-04T15:21:30.468+0000] {helpers.py:80} INFO - Chicago Bulls: Successfully scraped!
+[2023-05-04T15:21:33.968+0000] {helpers.py:80} INFO - Cleveland Cavaliers: Successfully scraped!
+[2023-05-04T15:21:38.310+0000] {helpers.py:80} INFO - Dallas Mavericks: Successfully scraped!
+[2023-05-04T15:21:49.079+0000] {helpers.py:80} INFO - Denver Nuggets: Successfully scraped!
+[2023-05-04T15:21:49.339+0000] {helpers.py:96} INFO - Saved in /opt/***/data/output_scrape_teams_1-8.csv
+[2023-05-04T15:21:49.402+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-04T15:21:49.470+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=scrape_and_save_to_csv, task_id=scrape_teams_1-8, execution_date=20230504T053000, start_date=20230504T122846, end_date=20230504T152149
+[2023-05-04T15:21:49.747+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=40262, status='terminated', exitcode=0, started='12:28:45') (40262) terminated with exit code 0

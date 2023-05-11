@@ -1,0 +1,67 @@
+[2023-05-10T14:51:39.472+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.push_csv_to_cloud_storage scheduled__2023-05-10T09:00:00+00:00 [queued]>
+[2023-05-10T14:51:39.487+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: scrape_and_save_to_csv.push_csv_to_cloud_storage scheduled__2023-05-10T09:00:00+00:00 [queued]>
+[2023-05-10T14:51:39.491+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T14:51:39.494+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-10T14:51:39.496+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-10T14:51:39.509+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): push_csv_to_cloud_storage> on 2023-05-10 09:00:00+00:00
+[2023-05-10T14:51:39.517+0000] {standard_task_runner.py:55} INFO - Started process 21201 to run task
+[2023-05-10T14:51:39.523+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'scrape_and_save_to_csv', 'push_csv_to_cloud_storage', 'scheduled__2023-05-10T09:00:00+00:00', '--job-id', '4168', '--raw', '--subdir', 'DAGS_FOLDER/scrape_and_push_dag.py', '--cfg-path', '/tmp/tmpm2elrfa5']
+[2023-05-10T14:51:39.526+0000] {standard_task_runner.py:83} INFO - Job 4168: Subtask push_csv_to_cloud_storage
+[2023-05-10T14:51:39.704+0000] {task_command.py:389} INFO - Running <TaskInstance: scrape_and_save_to_csv.push_csv_to_cloud_storage scheduled__2023-05-10T09:00:00+00:00 [running]> on host f41dbfa3d325
+[2023-05-10T14:51:39.759+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-10T14:51:39.801+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scrape_and_save_to_csv
+AIRFLOW_CTX_TASK_ID=push_csv_to_cloud_storage
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-10T09:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-05-10T09:00:00+00:00
+[2023-05-10T14:51:39.972+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/helpers.py", line 31, in push_to_gcs
+    bucket = storage_client.get_bucket(bucket_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 772, in get_bucket
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/bucket.py", line 1094, in reload
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_helpers.py", line 252, in reload
+    _target_object=self,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/client.py", line 379, in _get_resource
+    _target_object=_target_object,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 490, in api_request
+    extra_api_info=extra_api_info,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 342, in _make_request
+    method, url, headers, data, target_object, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 380, in _do_request
+    url=url, method=method, headers=headers, data=data, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 545, in request
+    self.credentials.before_request(auth_request, method, url, request_headers)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/auth/credentials.py", line 135, in before_request
+    self.refresh(request)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 430, in refresh
+    request, self._token_uri, assertion
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 304, in jwt_grant
+    request, token_uri, body, can_retry=can_retry
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 274, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 74, in _handle_error_response
+    error_details, response_data, retryable=retryable_error
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.'})
+[2023-05-10T14:51:40.006+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=scrape_and_save_to_csv, task_id=push_csv_to_cloud_storage, execution_date=20230510T090000, start_date=20230510T145139, end_date=20230510T145140
+[2023-05-10T14:51:40.030+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 4168 for task push_csv_to_cloud_storage (('invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values in the JWT claim.'}); 21201)
+[2023-05-10T14:51:40.101+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-10T14:51:40.128+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check
