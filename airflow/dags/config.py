@@ -1,10 +1,17 @@
 import os
 
-END_DATE = "2023-05-01T05:30:00+00:00"
+
+REDDIT_USERNAME = os.getenv("REDDIT_USERNAME")
+REDDIT_PASSWORD = os.getenv("REDDIT_PASSWORD")
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 
 AIRFLOW_HOME = os.getenv("AIRFLOW_HOME", "/opt/airflow/")
+AIRFLOW_DATA_DIRECTORY = os.path.join(AIRFLOW_HOME, "data")
 
-DATA_DIRECTORY = os.path.join(AIRFLOW_HOME, "data")
+GOOGLE_BUCKET_NAME = "trendba-bucket-1"
+GOOGLE_PROJECT_ID = "trendba"
+GOOGLE_DATASET_NAME = "all_subreddits_daily"
 
 TEAMS = {
     "Atlanta Hawks": "AtlantaHawks",
@@ -37,4 +44,6 @@ TEAMS = {
     "Toronto Raptors": "torontoraptors",
     "Utah Jazz": "UtahJazz",
     "Washington Wizards": "washingtonwizards",
+    # Include the r/nba subreddit
+    "NBA": "nba",
 }

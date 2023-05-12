@@ -9,21 +9,10 @@ import itertools
 from config import *
 from helpers import *
 
-
-# scrape_dag = DAG(
-#     dag_id="scrape_and_save_to_csv",
-#     description="Workflow to scrape Reddit data on NBA teams using the PushShift API and save to csv files",
-#     schedule="0 * * * *",
-#     start_date=datetime(2022, 5, 1),
-#     catchup=True,
-#     max_active_runs=1,
-# )
-
 scrape_dag = DAG(
     dag_id="scrape_and_save_to_csv",
     description="Workflow to scrape Reddit data on NBA teams using the Python Wrapper for the Reddit API and save to csv files",
     schedule="0 * * * *",
-    max_active_runs=2,
     catchup=False,
     start_date=datetime(2023, 5, 9, 21, 0, 0),
 )
@@ -61,11 +50,15 @@ with scrape_dag:
         task_id="push_csv_to_cloud_storage",
         python_callable=push_to_gcs,
         op_kwargs=dict(
-            source_file_name=f"{DATA_DIRECTORY}/all_teams.csv",
+            source_file_name=f"{AIRFLOW_DATA_DIRECTORY}/all_teams.csv",
             destination_blob_name="data/reddit-nba-scrape-job/{{ execution_date | ds }}/{{ execution_date }}.csv",
-            project_id="trendba",
-            bucket_name="trendba-bucket-1",
+            project_id=GOOGLE_PROJECT_ID,
+            bucket_name=GOOGLE_BUCKET_NAME,
         ),
+    )
+
+    trigger_bigquery_table_dag = TriggerDagRunOperator(
+        task_id="trigger_push_to_bq", trigger_dag_id="cloud_storage_to_bigquery_dag"
     )
 
     # Workflow
@@ -73,4 +66,5 @@ with scrape_dag:
         [scraping_thread_a, scraping_thread_b, scraping_thread_c, scraping_thread_d]
         >> join_csv
         >> push_to_bigquery
+        >> trigger_bigquery_table_dag
     )

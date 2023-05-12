@@ -1,2 +1,0 @@
-[2023-05-03T09:34:48.969+0000] {taskinstance.py:1084} INFO - Dependencies not met for <TaskInstance: scrape_and_save_to_csv.scrape_teams_9-16 scheduled__2023-05-03T01:30:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
-[2023-05-03T09:34:48.977+0000] {local_task_job.py:151} INFO - Task is not able to be run

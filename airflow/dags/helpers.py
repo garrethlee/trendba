@@ -1,18 +1,17 @@
 from config import *
 
 from datetime import datetime, timedelta
-import json
 import os
 import time
+import re
 import logging
-import requests
 import pandas as pd
 import praw
 
 from google.cloud import storage
 
-storage.blob._DEFAULT_CHUNKSIZE = 1 * 1024 * 1024  # 5 MB
-storage.blob._MAX_MULTIPART_SIZE = 1 * 1024 * 1024  # 5 MB
+storage.blob._DEFAULT_CHUNKSIZE = 5 * 1024 * 1024  # 5 MB
+storage.blob._MAX_MULTIPART_SIZE = 5 * 1024 * 1024  # 5 MB
 
 
 def push_to_gcs(
@@ -29,7 +28,7 @@ def push_to_gcs(
 
     storage_client = storage.Client(project=project_id)
     bucket = storage_client.get_bucket(bucket_name)
-    blob = bucket.blob(destination_blob_name, chunk_size=3 * 1024 * 1024)
+    blob = bucket.blob(destination_blob_name)
     blob.upload_from_filename(source_file_name)
     print(
         f"File {source_file_name} has been uploaded to Google Cloud Storage Bucket {bucket_name}"
@@ -48,22 +47,22 @@ def scrape_and_save(teams: dict, current_date: str, **kwargs):
     import praw
 
     reddit = praw.Reddit(
-        client_id="3-APC6hiy_zHlA1SxaDSAQ",
-        client_secret="mQbcLkYwee05KjNnXrXV7i5gXbcukw",
-        password="Gr8sixhonour!",
-        user_agent="testscript by u/silverflintlock",
-        username="silverflintlock",
+        client_id=CLIENT_ID,
+        client_secret=CLIENT_SECRET,
+        password=REDDIT_PASSWORD,
+        username=REDDIT_USERNAME,
+        user_agent=REDDIT_USERNAME,
     )
 
     # Preliminary calculation for hours
     curr_date = datetime.fromisoformat(current_date)
-    after = curr_date - timedelta(hours=1)
-    after = after.replace(tzinfo=None)
+    curr_date = curr_date.replace(tzinfo=None)
+    minimum_timestamp = curr_date - timedelta(hours=1)
 
     teams_df = pd.DataFrame()
 
-    if not os.path.exists(DATA_DIRECTORY):
-        os.makedirs(DATA_DIRECTORY)
+    if not os.path.exists(AIRFLOW_DATA_DIRECTORY):
+        os.makedirs(AIRFLOW_DATA_DIRECTORY)
 
     for team in teams:
         retries = 10
@@ -76,13 +75,17 @@ def scrape_and_save(teams: dict, current_date: str, **kwargs):
 
                 for post in latest_posts:
                     created_date = datetime.fromtimestamp(post.created_utc)
-                    # created_date = created_date.replace(tzinfo=None)
-                    # print(created_date, after)
-                    if created_date < after:
+
+                    if created_date > curr_date:
+                        continue
+                    if created_date < minimum_timestamp:
                         break
                     df = pd.DataFrame(
                         {
                             "created_timestamp": [created_date],
+                            "bracket_timestamp": [
+                                created_date.replace(minute=0, second=0, microsecond=0)
+                            ],
                             "team": [team],
                             "subreddit": [teams[team]],
                             "score": [post.score],
@@ -102,22 +105,22 @@ def scrape_and_save(teams: dict, current_date: str, **kwargs):
                 time.sleep(1)
 
     teams_df.to_csv(
-        f"{DATA_DIRECTORY}/output_{kwargs['ti'].task_id}.csv",
+        f"{AIRFLOW_DATA_DIRECTORY}/output_{kwargs['ti'].task_id}.csv",
         mode="w",
         index=False,
     )
 
-    logging.info(f"Saved in {DATA_DIRECTORY}/output_{kwargs['ti'].task_id}.csv")
+    logging.info(f"Saved in {AIRFLOW_DATA_DIRECTORY}/output_{kwargs['ti'].task_id}.csv")
 
 
 def join():
     """Joins all individual scraping csv files into one csv file"""
     df = pd.concat(
         [
-            pd.read_csv(f"{DATA_DIRECTORY}/output_scrape_teams_1-8.csv"),
-            pd.read_csv(f"{DATA_DIRECTORY}/output_scrape_teams_9-16.csv"),
-            pd.read_csv(f"{DATA_DIRECTORY}/output_scrape_teams_17-24.csv"),
-            pd.read_csv(f"{DATA_DIRECTORY}/output_scrape_teams_25-30.csv"),
+            pd.read_csv(f"{AIRFLOW_DATA_DIRECTORY}/output_scrape_teams_1-8.csv"),
+            pd.read_csv(f"{AIRFLOW_DATA_DIRECTORY}/output_scrape_teams_9-16.csv"),
+            pd.read_csv(f"{AIRFLOW_DATA_DIRECTORY}/output_scrape_teams_17-24.csv"),
+            pd.read_csv(f"{AIRFLOW_DATA_DIRECTORY}/output_scrape_teams_25-30.csv"),
         ]
     )
-    df.to_csv(f"{DATA_DIRECTORY}/all_teams.csv", index=False, mode="w")
+    df.to_csv(f"{AIRFLOW_DATA_DIRECTORY}/all_teams.csv", index=False, mode="w")
