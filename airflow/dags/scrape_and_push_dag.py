@@ -14,7 +14,7 @@ scrape_dag = DAG(
     description="Workflow to scrape Reddit data on NBA teams using the Python Wrapper for the Reddit API and save to csv files",
     schedule="0 * * * *",
     catchup=False,
-    start_date=datetime(2023, 5, 9, 21, 0, 0),
+    start_date=datetime(2023, 5, 13),
 )
 
 

@@ -13,7 +13,7 @@ bigquery_dag = DAG(
     description="Workflow to push cloud storage objects to bigquery",
     schedule="0 * * * *",
     catchup=False,
-    start_date=datetime(2023, 5, 9, 21, 0, 0),
+    start_date=datetime(2023, 5, 13),
 )
 
 # Create an external table
@@ -44,3 +44,5 @@ with bigquery_dag:
             },
         },
     )
+
+    create_external_table

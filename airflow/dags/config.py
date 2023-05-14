@@ -1,6 +1,5 @@
 import os
 
-
 REDDIT_USERNAME = os.getenv("REDDIT_USERNAME")
 REDDIT_PASSWORD = os.getenv("REDDIT_PASSWORD")
 CLIENT_ID = os.getenv("CLIENT_ID")
