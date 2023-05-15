@@ -55,3 +55,29 @@ Features needed: 'title', 'subreddit'
 10. Streamgraph of the most active NBA-related subreddits over a given time period. This could show the daily or hourly activity levels of each subreddit, with the ability to toggle between different time periods. Users could hover over specific subreddits to see more detailed information about their activity levels. 
 
 Features needed: 'created_utc', 'subreddit', 'subreddit_name_prefixed'
+
+
+
+Processing textual data and creating meaningful visualizations can be a challenging task, but here are 10 ideas and their possible implementations that can help you get started:
+
+1. Word Clouds: A word cloud is a visual representation of the most frequent words in your data. You can create a word cloud for each NBA team subreddit to see which words are most commonly used. Python libraries like WordCloud and matplotlib can be used to create word clouds.
+
+2. Sentiment Analysis: You can use sentiment analysis to identify the sentiment of each comment and see if it's positive, negative, or neutral. This can help you understand the overall sentiment of the NBA fans towards each team. Python libraries like TextBlob and NLTK can be used for sentiment analysis.
+
+3. Topic Modeling: Topic modeling is a technique that can be used to identify the most common topics in your data. You can use topic modeling to identify the most common topics discussed in each NBA team subreddit. Python libraries like gensim and pyLDAvis can be used for topic modeling.
+
+4. Word Frequencies: You can create bar graphs to show the frequency of the most common words used in each NBA team subreddit. Python libraries like pandas and matplotlib can be used to create bar graphs.
+
+5. Named Entity Recognition: Named Entity Recognition is a technique that can be used to identify the named entities in your data, such as the names of NBA players, coaches, and teams. Python libraries like spaCy and NLTK can be used for Named Entity Recognition.
+
+6. Emotion Analysis: Emotion analysis is a technique that can be used to identify the emotions expressed in each comment, such as joy, anger, and sadness. You can use emotion analysis to see which emotions are most commonly expressed in each NBA team subreddit. Python libraries like TextBlob and NLTK can be used for emotion analysis.
+
+7. Word Associations: You can create a network graph to show the relationships between the most common words used in each NBA team subreddit. Python libraries like NetworkX and matplotlib can be used to create network graphs.
+
+8. Word2Vec: Word2Vec is a technique that can be used to identify the most similar words to a given word. You can use Word2Vec to identify the most similar words to the names of NBA players, coaches, and teams. Python libraries like gensim can be used for Word2Vec.
+
+9. Bigrams and Trigrams: Bigrams and Trigrams are pairs and triplets of words that frequently occur together in your data. You can use Bigrams and Trigrams to identify the most common phrases used in each NBA team subreddit. Python libraries like NLTK can be used for Bigrams and Trigrams.
+
+10. Word Embeddings: Word Embeddings are a technique that can be used to represent words as vectors in a high-dimensional space. You can use Word Embeddings to identify the similarities and differences between the most common words used in each NBA team subreddit. Python libraries like gensim can be used for Word Embeddings.
+
+These are just a few ideas to get you started, but there are many other techniques and visualizations that can be used to analyze and visualize textual data. The specific techniques and visualizations that you choose will depend on your research questions and the specific characteristics of your data.
