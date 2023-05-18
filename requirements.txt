@@ -1,0 +1,9 @@
+dash==2.9.3
+dash_bootstrap_components==1.4.1
+dash_bootstrap_templates==1.0.8
+nltk==3.7
+pandas==2.0.1
+plotly==5.6.0
+praw==7.7.0
+pytz==2021.3
+wordcloud==1.9.1.1

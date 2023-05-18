@@ -1,4 +1,4 @@
-# Trending Basketball Players  Dashboard
+# Trending Basketball Players Dashboard
 
 ### What is it?
 
