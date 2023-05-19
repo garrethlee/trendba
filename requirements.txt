@@ -1,9 +1,12 @@
 dash==2.9.3
 dash_bootstrap_components==1.4.1
 dash_bootstrap_templates==1.0.8
+dash_mantine_components==0.12.1
+gensim==4.3.1
 nltk==3.7
 pandas==2.0.1
 plotly==5.6.0
 praw==7.7.0
+pyLDAvis==3.4.1
 pytz==2021.3
 wordcloud==1.9.1.1

@@ -1,0 +1,62 @@
+.header {
+    background-color: darkred;
+    padding-bottom: 1%;
+}
+
+.ldavis {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+}
+
+.tabs {
+    padding-top: 1%;
+    padding-left:6%;
+    padding-right:6%;
+}
+
+.search-bar {
+    width: 50%;
+    display:inline-block;
+    padding:2.5% 2.5% 0 6%;
+
+}
+
+.nba-wide-graph {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.nba-wide-div {
+    margin-bottom: 2.5%;
+}
+
+.team-wide-graph {
+    padding-top: 4.5%;
+    padding-left: 8.5%;
+}
+
+.team-wide-div {
+    margin-bottom: 2.5%;
+}
+
+@media (max-width: 1024px) {
+    .nba-wide-graph {
+      width: 100%;
+      margin: "2.5% 2.5% 2.5% 2.5%";
+    }
+  }
+
+
+
+
+  

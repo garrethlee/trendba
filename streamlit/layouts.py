@@ -1,4 +1,5 @@
 from dash import html, dcc
+import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
 
 from config import *
@@ -10,11 +11,6 @@ def create_layout():
     title_component = html.H1(
         "Trendba",
         className="title",
-        style={
-            "text-align": "center",
-            "margin": "5% 0 2.5% 0",
-            "display": "inline-block",
-        },
     )
     return html.Div(
         [
@@ -24,62 +20,69 @@ def create_layout():
                     html.Div(
                         [
                             dmc.Tooltip(
-                                label="ℹ️ Pronounced as Trend-B-A (Spell out NBA but replace the N with Trend)",
+                                label="ℹ️ Pronounced Trend-B-A (Spell out NBA but replace the N with Trend)",
                                 position="top",
                                 offset=0,
                                 children=title_component,
                                 withArrow=True,
                             )
                         ],
+                        # top right bottom left
                         style={
                             "justify-content": "center",
-                            "margin": "2.5% 0 2.5% 0",
+                            "padding": "2.5% 0 0 0",
                             "display": "flex",
                         },
                     ),
                     html.P(
                         "An Analytics Dashboard for NBA Subreddits - Updated Hourly! ⌛️",
-                        style={
-                            "text-align": "center",
-                            "margin": "-2% 0 2.5% 0",
-                        },
+                        className="subtitle",
                     ),
                 ],
                 className="header",
             ),
-            dmc.Divider(variant="solid"),
+            dmc.Tabs(
+                [
+                    dmc.TabsList(
+                        [
+                            dmc.Tab("NBA", value="nba"),
+                            dmc.Tab("Team", value="team"),
+                        ]
+                    ),
+                ],
+                id="tabs-picker",
+                value="nba",
+                className="tabs",
+            ),
             # Search Bar Div
             html.Div(
-                [
-                    dmc.MultiSelect(
-                        label="Select team(s)",
-                        placeholder="Select your preferred NBA team(s)",
-                        id="posts_per_hour_checklist",
-                        value=["Los Angeles Lakers", "Golden State Warriors"],
-                        data=NBA_TEAMS,
-                        clearable=True,
-                        searchable=True,
-                        nothingFound="Not found",
-                    )
-                ],
-                style=dict(
-                    width="50%", display="inline-block", padding="2.5% 2.5% 0 2.5%"
-                ),
+                id="search-bar-div",
+                className="search-bar",
             ),
             # NBA-Wide Visualizations
             html.Div(
                 [
-                    dcc.Graph(
-                        id="posts_per_hour_graph",
-                    ),
-                    dcc.Graph(id="sentiment_graph"),
+                    dbc.Row(
+                        [
+                            dbc.Col(
+                                html.Div(
+                                    id="left-graph",
+                                ),
+                                width=6,
+                                className="nba-wide-graph",
+                            ),
+                            dbc.Col(
+                                html.Div(
+                                    id="right-graph",
+                                ),
+                                width=6,
+                                className="nba-wide-graph",
+                                style={"height": "100%"},
+                            ),
+                        ]
+                    )
                 ],
-                # top right bottom left
-                style={
-                    "display": "flex",
-                    "align-items": "flex-start",
-                    "flex-wrap": "wrap",
-                },
+                className="nba-wide-div",
             ),
         ]
     )
