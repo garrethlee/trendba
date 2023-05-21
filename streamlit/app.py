@@ -2,7 +2,6 @@ from dash import Dash
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
-
 from helpers import *
 from config import *
 from callbacks import *
@@ -23,4 +22,4 @@ load_figure_template("COSMO")
 if __name__ == "__main__":
     app.layout = create_layout()
     get_callbacks(app)
-    app.run_server(host="0.0.0.0", port=8050, debug=True)
+    app.run_server(host="0.0.0.0", port=8050)

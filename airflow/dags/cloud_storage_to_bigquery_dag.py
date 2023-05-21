@@ -2,6 +2,7 @@ from airflow import DAG
 from airflow.providers.google.cloud.operators.bigquery import (
     BigQueryCreateExternalTableOperator,
 )
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import datetime
 
 from config import *
@@ -45,4 +46,8 @@ with bigquery_dag:
         },
     )
 
-    create_external_table
+    trigger_native_table_dag = TriggerDagRunOperator(
+        task_id="trigger_create_native_table", trigger_dag_id="store_daily_csv_in_gcs"
+    )
+
+    create_external_table >> trigger_native_table_dag

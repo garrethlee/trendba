@@ -1,8 +1,7 @@
 import pandas as pd
+from datetime import datetime
 from helpers import *
 
-
-DAILY_DATA_CSV_PATH = "data/daily_data.csv"
 
 #######
 

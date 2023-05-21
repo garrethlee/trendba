@@ -1,0 +1,2 @@
+[2023-05-19T21:33:24.309+0000] {taskinstance.py:1084} INFO - Dependencies not met for <TaskInstance: store_daily_csv_in_gcs.store_to_gcs manual__2023-05-19T21:33:20.547387+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0), upstream_task_ids={'create_native_table'}
+[2023-05-19T21:33:24.312+0000] {local_task_job.py:151} INFO - Task is not able to be run

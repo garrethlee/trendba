@@ -1,12 +1,17 @@
 from config import *
 from helpers import *
+from datetime import datetime, timedelta
 
 # STORE WORDCLOUDS
 WORDCLOUDS = {}
 
-DAILY_DATA_DF = preprocess_main_dataframe(
-    pd.read_csv(DAILY_DATA_CSV_PATH, parse_dates=[0, 1])
-)
+try:
+    today = datetime.today().date()
+    df = get_data(today)
+except Exception as e:
+    df = get_data(today - timedelta(days=1))
+
+DAILY_DATA_DF = preprocess_main_dataframe(df)
 
 # AGGREGATIONS FROM DAILY_DATA_DF
 HOURLY_POSTS_DF = (

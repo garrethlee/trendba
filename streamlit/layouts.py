@@ -9,7 +9,7 @@ from data import *
 
 def create_layout():
     title_component = html.H1(
-        "Trendba",
+        "🏀 Trendba 🏀",
         className="title",
     )
     return html.Div(
@@ -36,6 +36,10 @@ def create_layout():
                     ),
                     html.P(
                         "An Analytics Dashboard for NBA Subreddits - Updated Hourly! ⌛️",
+                        className="subtitle",
+                    ),
+                    html.P(
+                        f"Last updated: {datetime.today().minute} minutes ago",
                         className="subtitle",
                     ),
                 ],

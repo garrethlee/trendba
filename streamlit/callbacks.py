@@ -95,8 +95,13 @@ def get_callbacks(app):
                     className="search-bar",
                 ),
             )
-            wc_image = html.Img(id="image_wc", className="team-wide-graph")
-
+            wc_image = html.Div(
+                [
+                    html.H5("Most common words posted in the subreddit"),
+                    html.Img(id="image_wc"),
+                ],
+                className="team-wide-graph",
+            )
             test = dcc.Graph(id="tsne")
 
             return team_select, wc_image, test

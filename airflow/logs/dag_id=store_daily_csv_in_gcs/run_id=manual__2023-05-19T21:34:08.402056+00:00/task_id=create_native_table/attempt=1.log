@@ -1,0 +1,48 @@
+[2023-05-19T21:34:10.942+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: store_daily_csv_in_gcs.create_native_table manual__2023-05-19T21:34:08.402056+00:00 [queued]>
+[2023-05-19T21:34:10.973+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: store_daily_csv_in_gcs.create_native_table manual__2023-05-19T21:34:08.402056+00:00 [queued]>
+[2023-05-19T21:34:10.989+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-19T21:34:10.992+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-05-19T21:34:10.994+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-19T21:34:11.024+0000] {taskinstance.py:1309} INFO - Executing <Task(BigQueryInsertJobOperator): create_native_table> on 2023-05-19 21:34:08.402056+00:00
+[2023-05-19T21:34:11.035+0000] {standard_task_runner.py:55} INFO - Started process 634 to run task
+[2023-05-19T21:34:11.060+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'store_daily_csv_in_gcs', 'create_native_table', 'manual__2023-05-19T21:34:08.402056+00:00', '--job-id', '4419', '--raw', '--subdir', 'DAGS_FOLDER/store_daily_csv_in_gcs_dag.py', '--cfg-path', '/tmp/tmpa51vum7d']
+[2023-05-19T21:34:11.066+0000] {standard_task_runner.py:83} INFO - Job 4419: Subtask create_native_table
+[2023-05-19T21:34:11.324+0000] {task_command.py:389} INFO - Running <TaskInstance: store_daily_csv_in_gcs.create_native_table manual__2023-05-19T21:34:08.402056+00:00 [running]> on host e1b88dc21215
+[2023-05-19T21:34:11.414+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-19T21:34:11.469+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=store_daily_csv_in_gcs
+AIRFLOW_CTX_TASK_ID=create_native_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-19T21:34:08.402056+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-19T21:34:08.402056+00:00
+[2023-05-19T21:34:11.486+0000] {base.py:73} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2023-05-19T21:34:11.492+0000] {bigquery.py:2731} INFO - Executing: {'query': 'CREATE OR REPLACE TABLE all_subreddits_daily.native_2023-05-19 AS SELECT * FROM all_subreddits_daily.2023-05-19', 'useLegacySql': False}'
+[2023-05-19T21:34:11.548+0000] {bigquery.py:1546} INFO - Inserting job ***_store_daily_csv_in_gcs_create_native_table_2023_05_19T21_34_08_402056_00_00_c1cdc29f62ba5972adf872d9dc7165d8
+[2023-05-19T21:34:11.552+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2732, in execute
+    job = self._submit_job(hook, job_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2705, in _submit_job
+    nowait=True,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1549, in insert_job
+    job._begin()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1298, in _begin
+    super(QueryJob, self)._begin(client=client, retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 517, in _begin
+    data=self.to_api_repr(),
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 948, in to_api_repr
+    configuration = self._configuration.to_api_repr()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 720, in to_api_repr
+    query_parameters = resource["query"].get("queryParameters")
+AttributeError: 'str' object has no attribute 'get'
+[2023-05-19T21:34:11.576+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=store_daily_csv_in_gcs, task_id=create_native_table, execution_date=20230519T213408, start_date=20230519T213410, end_date=20230519T213411
+[2023-05-19T21:34:11.589+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 4419 for task create_native_table ('str' object has no attribute 'get'; 634)
+[2023-05-19T21:34:11.627+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-05-19T21:34:11.658+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

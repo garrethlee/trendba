@@ -10,6 +10,10 @@ from datetime import datetime
 import gensim
 import numpy as np
 from sklearn.manifold import TSNE
+from google.cloud import storage
+from google.oauth2 import service_account
+from io import StringIO
+
 
 from config import *
 
@@ -274,21 +278,35 @@ def generate_tsne(tokens, body, team):
 
     # Dominant topic number in each doc
     topic_num = np.argmax(arr, axis=1)
+    topic_num = [f"Topic {n}" for n in topic_num]
 
     # tSNE Dimension Reduction
     tsne_model = TSNE(n_components=2, verbose=0, random_state=0, angle=0.99, init="pca")
     tsne_lda = tsne_model.fit_transform(arr)
     tsne_lda = pd.DataFrame(np.c_[tsne_lda, topic_num, body])
 
-    # Plot the Topic Clusters using Bokeh
+    # Plot the Topic Clusters
     fig = px.scatter(
         x=tsne_lda[0],
         y=tsne_lda[1],
         color=tsne_lda[2],
         custom_data=[tsne_lda[3]],
         width=600,
-        height=400,
+        height=600,
         title=f"Topic Distribution for the {team} subreddit",
     )
     fig.update_traces(hovertemplate="%{customdata[0]}<extra></extra>")
     return fig
+
+
+def get_data(date_obj):
+    date = date_obj.strftime("%Y-%m-%d")
+    credentials = service_account.Credentials.from_service_account_file(
+        "credentials/data-service-account.json"
+    )
+    client = storage.Client(credentials=credentials, project=credentials.project_id)
+    bucket = client.bucket("trendba-bucket-1")
+    blob = bucket.blob(blob_name=f"output/{date}.csv")
+    string = StringIO(blob.download_as_text())
+    df = pd.read_csv(string, parse_dates=[0, 1])
+    return df
