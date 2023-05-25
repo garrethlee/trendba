@@ -5,6 +5,9 @@ from helpers import *
 
 #######
 
+# Starting configs
+PICKED_TEAMS = ["Los Angeles Lakers", "Golden State Warriors"]
+
 NBA_TEAMS = [
     "Atlanta Hawks",
     "Boston Celtics",

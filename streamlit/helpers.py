@@ -1,6 +1,6 @@
 import pandas as pd
 import plotly.express as px
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 import nltk
 import re
@@ -218,40 +218,6 @@ def preprocess_sentiments(df):
         lambda x: datetime.strftime(x, "%B %d, %H:%M")
     )
     return df
-
-
-# def generate_lda_vis(tokens, team):
-#     # Create Dictionary
-#     id2word = gensim.corpora.Dictionary(tokens)
-#     # Create Corpus
-#     texts = tokens
-#     # Term Document Frequency
-#     corpus = [id2word.doc2bow(text) for text in texts]
-#     # number of topics
-#     num_topics = 5
-#     # Build LDA model
-#     lda_model = gensim.models.LdaModel(
-#         corpus=corpus, id2word=id2word, num_topics=num_topics, passes=1
-#     )
-
-#     lda_model_filepath = "data/lda_model"
-#     corpus_filepath = "data/corpus"
-#     id2word_filepath = "data/id2word"
-
-#     filepaths = [lda_model_filepath, corpus_filepath, id2word_filepath]
-
-#     pickles = []
-
-#     for path, obj in zip(filepaths, (lda_model, corpus, id2word)):
-#         with open(path, "wb") as f:
-#             pickle.dump(obj, f)
-#         # load the pre-prepared pyLDAvis data from disk
-#         with open(path, "rb") as f:
-#             pickles.append(pickle.load(f))
-
-#     LDAvis_prepared = pyLDAvis.gensim.prepare(pickles[0], pickles[1], pickles[2])
-#     pyLDAvis.save_html(LDAvis_prepared, f"assets/ldavis_prepared_{team}.html")
-#     return f"assets/ldavis_prepared_{team}.html"
 
 
 def generate_tsne(tokens, body, team):

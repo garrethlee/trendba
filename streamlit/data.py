@@ -2,7 +2,6 @@ from config import *
 from helpers import *
 from datetime import datetime, timedelta
 
-# STORE WORDCLOUDS
 WORDCLOUDS = {}
 
 try:

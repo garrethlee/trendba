@@ -20,6 +20,6 @@ app = Dash(
 load_figure_template("COSMO")
 
 if __name__ == "__main__":
-    app.layout = create_layout()
+    app.layout = create_layout
     get_callbacks(app)
     app.run_server(host="0.0.0.0", port=8050)

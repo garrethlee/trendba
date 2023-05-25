@@ -1,4 +1,4 @@
-from dash import Output, Input, dcc, html
+from dash import Output, Input, dcc, html, ctx
 import plotly.express as px
 import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
@@ -7,7 +7,7 @@ import base64
 
 from helpers import *
 from config import *
-from data import *
+from data import HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF, DAILY_DATA_DF, WORDCLOUDS
 
 
 def get_callbacks(app):
@@ -15,8 +15,36 @@ def get_callbacks(app):
         Output("posts_per_hour_graph", "figure"),
         Output("sentiment_graph", "figure"),
         Input("posts_per_hour_checklist", "value"),
+        Input("update-interval", "n_intervals"),
     )
-    def update_charts(teams):
+    def update_charts(teams, _):
+        global HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF, DAILY_DATA_DF, PICKED_TEAMS
+        PICKED_TEAMS = teams
+        triggered = ctx.triggered_id
+        if triggered == "update-interval":
+            WORDCLOUDS = {}
+            try:
+                today = datetime.today().date()
+                df = get_data(today)
+            except Exception as e:
+                df = get_data(today - timedelta(days=1))
+
+            DAILY_DATA_DF = preprocess_main_dataframe(df)
+
+            # AGGREGATIONS FROM DAILY_DATA_DF
+            HOURLY_POSTS_DF = (
+                DAILY_DATA_DF.groupby(["bracket_timestamp", "team"])
+                .score.count()
+                .reset_index()
+            )
+
+            AVERAGE_SENTIMENT_DF = (
+                DAILY_DATA_DF.groupby(["bracket_timestamp", "team"])
+                .compound_sentiment.mean()
+                .reset_index()
+            )
+            print("Updated data sources!")
+
         fig_hour = update_line_chart(HOURLY_POSTS_DF, teams)
         fig_sentiment = update_bar_chart(AVERAGE_SENTIMENT_DF, teams)
         return fig_hour, fig_sentiment
@@ -58,7 +86,6 @@ def get_callbacks(app):
         )
 
         return WORDCLOUDS[team]
-        # vis_path,
 
     @app.callback(
         Output("search-bar-div", "children"),
