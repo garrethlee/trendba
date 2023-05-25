@@ -8,9 +8,7 @@ from data import *
 
 
 def create_layout():
-    get_data(datetime.today().date())
-    update_bar_chart(AVERAGE_SENTIMENT_DF, PICKED_TEAMS)
-    update_line_chart(HOURLY_POSTS_DF, PICKED_TEAMS)
+    update_data_and_plots()
     title_component = html.H1(
         f"🏀 Trendba 🏀",
         className="title",
@@ -18,7 +16,7 @@ def create_layout():
     return html.Div(
         [
             # Update every 10 minutes
-            dcc.Interval(id="update-interval", interval=1000 * 60),
+            dcc.Interval(id="update-interval", interval=1000 * 60 * 20),
             # Header Div
             html.Div(
                 [

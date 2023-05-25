@@ -22,6 +22,7 @@ def get_callbacks(app):
         PICKED_TEAMS = teams
         triggered = ctx.triggered_id
         if triggered == "update-interval":
+            PICKED_TEAMS = ["Los Angeles Lakers", "Golden State Warriors"]
             WORDCLOUDS = {}
             try:
                 today = datetime.today().date()
