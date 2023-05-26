@@ -279,7 +279,7 @@ def get_data(date_obj):
 
 
 def update_data_and_plots():
-    global DAILY_DATA_DF, HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF
+    global DAILY_DATA_DF, HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF, PICKED_TEAMS
     try:
         today = datetime.today().date()
         df = get_data(today)

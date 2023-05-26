@@ -18,7 +18,7 @@ def get_callbacks(app):
         Input("update-interval", "n_intervals"),
     )
     def update_charts(teams, _):
-        global HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF, DAILY_DATA_DF, PICKED_TEAMS
+        global HOURLY_POSTS_DF, AVERAGE_SENTIMENT_DF, DAILY_DATA_DF, PICKED_TEAMS, WORDCLOUDS
         PICKED_TEAMS = teams
         triggered = ctx.triggered_id
         if triggered == "update-interval":
